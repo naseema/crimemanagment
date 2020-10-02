@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace LoginWithMSSql
+namespace CrimeManagement
 {
 
     public partial class Default : BaseDataPage
@@ -16,8 +16,7 @@ namespace LoginWithMSSql
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            base.OnPageLoad();
-
+            base.Page_Load(sender, e);
             DisplayData();
         }
 

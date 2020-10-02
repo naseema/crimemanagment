@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TheftPage.aspx.cs" Inherits="Final_Project.TheftPage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TheftPage.aspx.cs" Inherits="CrimeManagement.TheftPage" %>
 
 <!DOCTYPE html>
 

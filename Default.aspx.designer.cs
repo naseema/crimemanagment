@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LoginWithMSSql
+namespace CrimeManagement
 {
 
 

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Gun.aspx.cs" Inherits="Final_Project.WebForm4" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Gun.aspx.cs" Inherits="CrimeManagement.WebForm4" %>
 
 <!DOCTYPE html>
 

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PolicPage.aspx.cs" Inherits="Final_Project.PolicPage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PolicPage.aspx.cs" Inherits="CrimeManagement.PolicPage" %>
 
 <!DOCTYPE html>
 <html>

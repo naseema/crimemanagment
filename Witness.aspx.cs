@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Final_Project
+namespace CrimeManagement
 {
     public partial class Witness : System.Web.UI.Page
     {
