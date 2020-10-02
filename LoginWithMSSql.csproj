@@ -83,6 +83,9 @@
     <Content Include="Witness.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseDataPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

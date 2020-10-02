@@ -10,26 +10,20 @@ using System.Data.SqlClient;
 namespace LoginWithMSSql
 {
 
-    public partial class Default : System.Web.UI.Page
+    public partial class Default : BaseDataPage
     {
 
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\WebDB.mdf;Integrated Security=True");
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (con.State == ConnectionState.Open)
-            {
-                con.Close();
-            }
-
-            con.Open();
+            base.OnPageLoad();
 
             DisplayData();
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = con.CreateCommand();
+            SqlCommand cmd = sqlConnection.CreateCommand();
             cmd.CommandType = CommandType.Text;
             //cmd.CommandText = "insert into users ('admin','admin','admin')";
             cmd.CommandText = "insert into users values('" + username_tv.Text + "','" + password_tv.Text + "','" + fullname_tv.Text + "')";
@@ -46,7 +40,7 @@ namespace LoginWithMSSql
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = con.CreateCommand();
+            SqlCommand cmd = sqlConnection.CreateCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "select * from users where username='"+username_tv.Text+ " and 'password='" + password_tv.Text + "'";
             SqlDataReader sqlr = cmd.ExecuteReader();
@@ -65,7 +59,7 @@ namespace LoginWithMSSql
 
         public void DisplayData()
         {
-            SqlCommand cmd = con.CreateCommand();
+            SqlCommand cmd = sqlConnection.CreateCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "select * from users";
             cmd.ExecuteNonQuery();
