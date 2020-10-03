@@ -25,11 +25,59 @@ namespace CrimeManagement
             sqlConnection.Open();
         }
 
+        protected bool IsUserExist(string username, string password)
+        {
+            SqlCommand cmd = sqlConnection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from users where username='" + username + " ' and password='" + password + "'";
+            SqlDataReader sqlr = null;
+            try
+            {
+                sqlr = cmd.ExecuteReader();
+                if (sqlr.Read())
+                {
+                    return true; 
+                }
+                else
+                {
+                    return false;
+                }
+            } finally
+            {
+                sqlr?.Close();
+                cmd.Dispose();
+            }
+            
+
+        }
         protected void AddCrime(string location, string description)
         {
             SqlCommand cmd = sqlConnection.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "insert into crimes values('" + location + "','" + description + "','" + description + "')";
+ 
+            cmd.CommandText = "insert into crimes values('" 
+                + "type_null" + "','" 
+                + location + "','"
+                + new DateTime() + "','"
+                + new DateTime() + "','"
+                + description + "')";
+
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
+        }
+
+        protected void AddCrimeReport(string location, string description)
+        {
+            SqlCommand cmd = sqlConnection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+ 
+            cmd.CommandText = "insert into crimes values('" 
+                + "type_null" + "','" 
+                + location + "','"
+                + "date" + "','"
+                + "time" + "','"
+                + description + "')";
+
             cmd.ExecuteNonQuery();
             cmd.Dispose();
         }

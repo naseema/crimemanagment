@@ -13,7 +13,6 @@ namespace CrimeManagement
     public partial class Default : BaseDataPage
     {
 
-
         protected void Page_Load(object sender, EventArgs e)
         {
             base.Page_Load(sender, e);
@@ -39,11 +38,7 @@ namespace CrimeManagement
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = sqlConnection.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from users where username='"+username_tv.Text+ " and 'password='" + password_tv.Text + "'";
-            SqlDataReader sqlr = cmd.ExecuteReader();
-            if (sqlr.Read())
+            if (IsUserExist(username_tv.Text, password_tv.Text))
             {
                 results.Text = "Login Succeded!";
             } else
@@ -51,8 +46,7 @@ namespace CrimeManagement
                 results.Text = "Login failed!";
             }
 
-            sqlr.Close();
-            cmd.Dispose();
+            AddCrime("location", " description");
 
         }
 
@@ -60,7 +54,7 @@ namespace CrimeManagement
         {
             SqlCommand cmd = sqlConnection.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from users";
+            cmd.CommandText = "select * from crimes";
             cmd.ExecuteNonQuery();
 
             DataTable data = new DataTable();
