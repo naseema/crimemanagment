@@ -20,7 +20,7 @@ namespace CrimeManagment
         //    cmd.CommandText = "select * from users where username='" + TxtUserName.Text + "','" + TxtPassword.Text + "')";
             if (IsUserExist(TxtUserName.Text, TxtPassword.Text))
             {
-                btnLogin.Text = "Login Succeded!";
+                btnLogin.Text = "Login Succeded!";              
                 
             }
             else
