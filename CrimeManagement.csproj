@@ -75,6 +75,7 @@
     <Content Include="FirstPage.aspx" />
     <Content Include="Gun.aspx" />
     <Content Include="Knife.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="MurderPage.aspx" />
     <Content Include="OtherM.aspx" />
     <Content Include="PolicPage.aspx" />
@@ -104,6 +105,13 @@
     <Compile Include="Knife.aspx.cs">
       <DependentUpon>Knife.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="MurderPage.aspx.cs">
       <DependentUpon>MurderPage.aspx</DependentUpon>
