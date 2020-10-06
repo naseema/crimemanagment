@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Witness.aspx.cs" Inherits="New.Witness" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Witness.aspx.cs" Inherits="CrimeManagement.Witness" %>
 
 <!DOCTYPE html>
 
@@ -39,7 +39,7 @@
             <br />
             <asp:Label ID="Label5" runat="server" Text="Other"></asp:Label>
 
-            <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TextBox3" runat="server" OnTextChanged="TextBox3_TextChanged"></asp:TextBox>
      
             <br />
             <br />

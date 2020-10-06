@@ -13,5 +13,16 @@ namespace CrimeManagement
         {
 
         }
+
+        protected void murBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Murders.aspx");
+        }
+
+        protected void theBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Thefts.aspx");
+        }
+
     }
 }

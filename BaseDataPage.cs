@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Web;
 
 namespace CrimeManagement
@@ -80,6 +81,12 @@ namespace CrimeManagement
 
             cmd.ExecuteNonQuery();
             cmd.Dispose();
+        }
+
+        protected List<String> GetCrimeReports(String crimeId)
+        {
+            return null;
+
         }
 
     }

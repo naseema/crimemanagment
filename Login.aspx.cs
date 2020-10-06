@@ -20,12 +20,13 @@ namespace CrimeManagment
         //    cmd.CommandText = "select * from users where username='" + TxtUserName.Text + "','" + TxtPassword.Text + "')";
             if (IsUserExist(TxtUserName.Text, TxtPassword.Text))
             {
-                btnLogin.Text = "Login Succeded!";              
-                
+
+                Response.Redirect("PolicPage.aspx");
+
             }
             else
             {
-                btnLogin.Text = "Login failed!";
+                Response.Write( "Login failed!");
             }
 
         }
