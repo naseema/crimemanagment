@@ -44,7 +44,6 @@ namespace CrimeManagement {
         {
             AddCrime(TB_CrimeType.Text, TB_Details.Text);
             Button4_Click(null, null); // Load crimes
-            GetCrime(13);
         }
     }
 }

@@ -85,9 +85,9 @@ namespace CrimeManagement {
                 sqlr = cmd.ExecuteReader();
                 if (sqlr.Read()) {
                     Crime c = new Crime();
-                    c.description = sqlr.GetString(0);
-                    c.type = sqlr.GetString(0);
-                    c.location = sqlr.GetString(0);
+                    c.description = sqlr.GetString(5);
+                    c.type = sqlr.GetString(1);
+                    c.location = sqlr.GetString(2);
                     return c;
                 }
                 else {
