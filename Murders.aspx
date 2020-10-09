@@ -8,9 +8,8 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <asp:TextBox ID="Crime1" runat="server" OnTextChanged="Crime1_TextChanged">Crime knife 
+        <asp:Label ID="Label1" runat="server" Text="stabbed with a knife"></asp:Label>
 
-</asp:TextBox>
     </form>
 </body>
 </html>

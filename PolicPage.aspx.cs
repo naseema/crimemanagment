@@ -4,16 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
+using CrimeManagement;
 
 namespace CrimeManagement
 {
-    public partial class PolicPage : System.Web.UI.Page
+    public partial class PolicPage : BaseDataPage
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
         protected void murBtn_Click(object sender, EventArgs e)
         {
             Response.Redirect("Murders.aspx");
@@ -24,5 +22,10 @@ namespace CrimeManagement
             Response.Redirect("Thefts.aspx");
         }
 
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+                
+            
+        }
     }
 }

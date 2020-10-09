@@ -20,7 +20,7 @@
 &nbsp;
             <asp:Button ID="Button3" runat="server" Text="Witness" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label1" runat="server" Text="search "></asp:Label>
+            <asp:Button ID="Button1" runat="server" Text="Search" />
 &nbsp;
             <asp:TextBox ID="TextBox1" runat="server" Width="205px"></asp:TextBox>
             <br />
@@ -31,7 +31,7 @@
             <asp:Label ID="Label2" runat="server" Text="Enter a crime:"></asp:Label>
             <br />
             <asp:Label ID="Label3" runat="server" Text="Crime Type :"></asp:Label>
-&nbsp;<asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+&nbsp;<asp:TextBox ID="CrimeTypeID" runat="server"></asp:TextBox>
             <br />
             <asp:Label ID="Label4" runat="server" Text="Time :"></asp:Label>
 &nbsp;<asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
@@ -40,7 +40,14 @@
 &nbsp;<asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
             <br />
             <asp:Label ID="Label6" runat="server" Text="Details :"></asp:Label>
-&nbsp;<asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+&nbsp;<asp:TextBox ID="DetailsID" runat="server"></asp:TextBox>
+            <br />
+            <br />
+            <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Save" Width="79px" />
+            <br />
+            <br />
+            <br />
+            <br />
         </div>
     </form>
 </body>
