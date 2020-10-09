@@ -21,7 +21,7 @@ namespace CrimeManagment
             if (IsUserExist(TxtUserName.Text, TxtPassword.Text))
             {
 
-                Response.Redirect("PolicPage.aspx");
+                Response.Redirect("Police.aspx");
 
             }
             else

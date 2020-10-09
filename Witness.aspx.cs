@@ -13,10 +13,5 @@ namespace CrimeManagement
         {
 
         }
-
-        protected void TextBox3_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
     }
 }

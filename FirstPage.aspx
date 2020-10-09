@@ -1,5 +1,4 @@
-﻿
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FirstPage.aspx.cs" Inherits="CrimeManagement.FirstPage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FirstPage.aspx.cs" Inherits="CrimeManagement.FirstPage" %>
 
 <!DOCTYPE html>
 
@@ -39,9 +38,9 @@
     <form id="form1" runat="server">
         <div>
             <asp:Label ID="Label1" runat="server" Text="Are You Police Or Witness?"></asp:Label>
-            <asp:Image ID="Image1" runat="server"
-                src="https://www.gov.il/BlobFolder/news/police_assistant_commissioners_appointments2018/he/%D7%A1%D7%9E%D7%9C%20%D7%9E%D7%A9%D7%98%D7%A8%D7%94%20%D7%A8%D7%99%D7%91%D7%95%D7%A2.jpg"/>
-
+            <asp:Image ID="Image1" runat="server" 
+                 src="https://www.gov.il/BlobFolder/news/police_assistant_commissioners_appointments2018/he/%D7%A1%D7%9E%D7%9C%20%D7%9E%D7%A9%D7%98%D7%A8%D7%94%20%D7%A8%D7%99%D7%91%D7%95%D7%A2.jpg"/>
+               
             <asp:Button ID="BtnPolice" runat="server" Text="Police" OnClick="BtnPolice_Click" />
             <asp:Button ID="BtnWitness" runat="server" Text="Witness" OnClick="BtnWitness_Click" />
         </div>

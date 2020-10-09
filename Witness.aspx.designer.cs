@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace New
+namespace CrimeManagement
 {
 
 

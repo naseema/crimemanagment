@@ -75,7 +75,7 @@
     <Content Include="FirstPage.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Murders.aspx" />
-    <Content Include="PolicPage.aspx" />
+    <Content Include="Police.aspx" />
     <Content Include="Thefts.aspx" />
     <Content Include="Web.config" />
     <Content Include="Witness.aspx" />
@@ -95,6 +95,9 @@
       <DependentUpon>FirstPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="FirstPage.aspx.designer.cs">
+      <DependentUpon>FirstPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -109,9 +112,12 @@
     <Compile Include="Murders.aspx.designer.cs">
       <DependentUpon>Murders.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PolicPage.aspx.cs">
-      <DependentUpon>PolicPage.aspx</DependentUpon>
+    <Compile Include="Police.aspx.cs">
+      <DependentUpon>Police.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Police.aspx.designer.cs">
+      <DependentUpon>Police.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Thefts.aspx.cs">
@@ -124,6 +130,9 @@
     <Compile Include="Witness.aspx.cs">
       <DependentUpon>Witness.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Witness.aspx.designer.cs">
+      <DependentUpon>Witness.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
