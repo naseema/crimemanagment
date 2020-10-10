@@ -78,13 +78,13 @@ namespace CrimeManagement
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// TextBox2 control.
+        /// TB_CrimeType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox TB_CrimeType;
 
         /// <summary>
         /// Label2 control.
@@ -132,13 +132,13 @@ namespace CrimeManagement
         protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
-        /// TextBox5 control.
+        /// TB_Details control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox TB_Details;
 
         /// <summary>
         /// Button5 control.
@@ -150,21 +150,12 @@ namespace CrimeManagement
         protected global::System.Web.UI.WebControls.Button Button5;
 
         /// <summary>
-        /// GridView1 control.
+        /// grid_crimes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
-
-        /// <summary>
-        /// SqlDataSource1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.GridView grid_crimes;
     }
 }
