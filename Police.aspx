@@ -16,17 +16,20 @@
         <asp:Button ID="Button3" runat="server" Text="Witness"/>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="Button4" runat="server" Text="Search" OnClick="Button4_Click"/>
-        &nbsp;<asp:TextBox ID="TextBox1" runat="server" Width="198px"></asp:TextBox>
+        &nbsp;<asp:TextBox ID="SearchID" runat="server" Width="198px"></asp:TextBox>
         <br/>
         <br/>
         <asp:Label ID="Label1" runat="server" Text="Crime Type :"></asp:Label>
         <asp:TextBox ID="TB_CrimeType" runat="server"></asp:TextBox>
         <br/>
         <asp:Label ID="Label2" runat="server" Text="Time :"></asp:Label>
-        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TimeID" runat="server"></asp:TextBox>
         <br/>
         <asp:Label ID="Label3" runat="server" Text="Date :"></asp:Label>
-        <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+        <asp:TextBox ID="DateID" runat="server"></asp:TextBox>
+        <br />
+        <asp:Label ID="Label5" runat="server" Text="Place :"></asp:Label>
+        <asp:TextBox ID="PlaceID" runat="server"></asp:TextBox>
         <br/>
         <asp:Label ID="Label4" runat="server" Text="Details:"></asp:Label>
         <asp:TextBox ID="TB_Details" runat="server"></asp:TextBox>
@@ -39,9 +42,9 @@
 
         <%-- Crimes --%>
 
-        <asp:GridView id="grid_crimes" runat="server" AutoGenerateColumns="true"
+        <asp:GridView id="grid_crimes" runat="server"
                       OnRowCommand="GridCrimes_RowCommand"
-                      OnRowDeleting="GridCrimes_OnRowDeleting">
+                      OnRowDeleting="GridCrimes_OnRowDeleting" OnSelectedIndexChanged="grid_crimes_SelectedIndexChanged">
             <Columns>
 
                 <asp:HyperLinkField Text="View"
@@ -59,6 +62,7 @@
             </Columns>
 
         </asp:GridView>
+        <br />
     </div>
 </form>
 </body>

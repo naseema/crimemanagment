@@ -15,6 +15,11 @@ namespace CrimeManagement {
             {
                 Button4_Click(null, null); // Load crimes
             }
+            string v = Request.QueryString["id"];
+            if (v != null)
+            {
+                GetCrime(Request.QueryString["id"]);
+            }
         }
         
         protected void GridCrimes_RowCommand(Object sender, GridViewCommandEventArgs e) {
@@ -31,7 +36,7 @@ namespace CrimeManagement {
 
         protected void Button4_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = QueryData("crimes", "description LIKE '%" + TextBox1.Text + "%'");
+            SqlCommand cmd = QueryData("crimes", "description LIKE '%" + SearchID.Text + "%'");
             DataTable data = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(data);
@@ -42,8 +47,15 @@ namespace CrimeManagement {
 
         protected void Button5_Click(object sender, EventArgs e)
         {
-            AddCrime(TB_CrimeType.Text, TB_Details.Text);
+            AddCrime(TB_CrimeType.Text, /*TimeID.Text , DateID.Text, PlaceID.Text ,*/ TB_Details.Text); 
             Button4_Click(null, null); // Load crimes
         }
+
+        protected void grid_crimes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Response.Redirect("~/ViewCrime.aspx?Location=" + TB_CrimeType.Text + "&Details=" + TB_Details.Text);
+        }
+
+       
     }
 }

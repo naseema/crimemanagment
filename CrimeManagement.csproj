@@ -77,6 +77,7 @@
     <Content Include="Murders.aspx" />
     <Content Include="Police.aspx" />
     <Content Include="Thefts.aspx" />
+    <Content Include="ViewCrime.aspx" />
     <Content Include="Web.config" />
     <Content Include="Witness.aspx" />
   </ItemGroup>
@@ -127,6 +128,13 @@
     </Compile>
     <Compile Include="Thefts.aspx.designer.cs">
       <DependentUpon>Thefts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCrime.aspx.cs">
+      <DependentUpon>ViewCrime.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewCrime.aspx.designer.cs">
+      <DependentUpon>ViewCrime.aspx</DependentUpon>
     </Compile>
     <Compile Include="Witness.aspx.cs">
       <DependentUpon>Witness.aspx</DependentUpon>

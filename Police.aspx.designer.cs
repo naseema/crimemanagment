@@ -60,13 +60,13 @@ namespace CrimeManagement
         protected global::System.Web.UI.WebControls.Button Button4;
 
         /// <summary>
-        /// TextBox1 control.
+        /// SearchID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox SearchID;
 
         /// <summary>
         /// Label1 control.
@@ -96,13 +96,13 @@ namespace CrimeManagement
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// TextBox3 control.
+        /// TimeID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox TimeID;
 
         /// <summary>
         /// Label3 control.
@@ -114,13 +114,31 @@ namespace CrimeManagement
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// TextBox4 control.
+        /// DateID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox DateID;
+
+        /// <summary>
+        /// Label5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label5;
+
+        /// <summary>
+        /// PlaceID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox PlaceID;
 
         /// <summary>
         /// Label4 control.

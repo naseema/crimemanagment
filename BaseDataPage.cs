@@ -43,16 +43,18 @@ namespace CrimeManagement {
             }
         }
 
-        protected void AddCrime(string location, string description) {
+        protected void AddCrime(/*string type, string Time, string Date,*/ string location, string description)
+        {
+
             SqlCommand cmd = sqlConnection.CreateCommand();
             cmd.CommandType = CommandType.Text;
 
             cmd.CommandText = "insert into crimes values('"
                               + "type_null" + "','"
-                              + location + "','"
-                              + new DateTime() + "','"
-                              + new DateTime() + "','"
-                              + description + "')";
+                + location + "','"
+                + new DateTime() + "','"
+                + new DateTime() + "','"
+                + description + "')";
 
             cmd.ExecuteNonQuery();
             cmd.Dispose();
@@ -73,7 +75,7 @@ namespace CrimeManagement {
             cmd.Dispose();
         }
 
-        protected Crime GetCrime(int id)
+        protected Crime GetCrime(string id)
         {
             SqlCommand cmd = sqlConnection.CreateCommand();
             cmd.CommandType = CommandType.Text;
