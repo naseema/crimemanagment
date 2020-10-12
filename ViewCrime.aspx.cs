@@ -31,5 +31,21 @@ namespace CrimeManagement
                 // TODO bad params, show error
             }
         }
+
+
+        protected void gridViewCrime_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void gridViewCrime_OnRowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            
+        }
+
+        protected void gridViewCrime_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+
+        }
     }
 }
