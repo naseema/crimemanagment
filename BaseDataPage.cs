@@ -107,7 +107,7 @@ namespace CrimeManagement {
             //TODO
         }
 
-        protected void AddCrimeReport(int crimeId, string location, string description) {
+        protected void AddCrimeReport(string crimeId, string location, string description) {
             //TODO
         }
 

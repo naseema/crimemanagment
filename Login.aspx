@@ -32,7 +32,7 @@
 
                 </td>
                 <td>
-                    <asp:TextBox ID="TxtPassword" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TxtPassword" runat="server" TextMode="Password"></asp:TextBox>
                 </td>
             </tr>
             <tr>
