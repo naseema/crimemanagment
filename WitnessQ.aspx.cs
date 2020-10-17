@@ -13,24 +13,35 @@ namespace CrimeManagement
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            base.Page_Load(sender, e);
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
             SqlCommand cmd = sqlConnection.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "Select * from crimes WHERE location AND date AND time =" + PlaceBox + TimeBox + DateBox;
-            if (cmd.CommandText == PlaceBox.Text)
+            cmd.CommandText = "Select * from crimes WHERE location = '" + PlaceBox.Text + "' and type = '" + TypeBox.Text + "'";
+            //cmd.CommandText = "Select * from crimes WHERE type = '" + TypeBox.Text + "'" ;
+            SqlDataReader sqlr = null;
+            try
             {
-                Response.Redirect("Witness.aspx");
+                sqlr = cmd.ExecuteReader();
+                if (sqlr.Read())
+                {
+                    Response.Redirect("Witness.aspx");
+                }
+                else
+                {
+                    Response.Write(" Error");
+                }
             }
-            else
+            finally
             {
-                Response.Write(" Error");
-               
+                sqlr?.Close();
+                cmd.Dispose();
             }
-            
+
+            //Response.Redirect("~/Witness.aspx?TypeCrime=" + TypeBox.Text + "&Location=" + PlaceBox.Text);
         }
     }
 }

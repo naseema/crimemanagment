@@ -20,6 +20,10 @@
             <asp:CheckBox ID="TheftBox" runat="server" Text="Thefts" />
             <br />
             <br />
+            <asp:Label ID="TypeID" runat="server" Text="Type :"></asp:Label>
+            <asp:TextBox ID="TypeBox" runat="server"></asp:TextBox>
+            <br />
+            <br />
 &nbsp;<asp:Label ID="PlaceLabel" runat="server" Text="Place The Crime :"></asp:Label>
             <asp:TextBox ID="PlaceBox" runat="server"></asp:TextBox>
             <br />
@@ -30,7 +34,8 @@
             <asp:TextBox ID="DateBox" runat="server" TextMode="Date"></asp:TextBox>
             <br />
             <br />
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Go To The Second Page " />
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Find Crime " />
+            &nbsp;<asp:Button ID="Button2" runat="server" Text="send" />
             <br />
         </div>
     </form>

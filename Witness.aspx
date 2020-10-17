@@ -44,6 +44,12 @@
             <br />
             <br />
      
+            <br />
+            <asp:Button ID="Button1" runat="server" Text="Send" />
+            <br />
+            <br />
+            <br />
+     
         </div>
     </form>
 </body>
