@@ -47,7 +47,7 @@ namespace CrimeManagement {
 
         protected void Button5_Click(object sender, EventArgs e)
         {
-            AddCrime(TB_CrimeType.Text, /*TimeID.Text , DateID.Text, PlaceID.Text ,*/ TB_Details.Text); 
+            AddCrime(TB_CrimeType.Text, PlaceID.Text, DateID.Text, TimeID.Text, TB_Details.Text); 
             Button4_Click(null, null); // Load crimes
         }
 

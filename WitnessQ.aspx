@@ -34,6 +34,10 @@
             <asp:TextBox ID="DateBox" runat="server" TextMode="Date"></asp:TextBox>
             <br />
             <br />
+            <asp:GridView ID="GridView1" runat="server">
+            </asp:GridView>
+            <br />
+            <br />
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Find Crime " />
             &nbsp;<asp:Button ID="Button2" runat="server" Text="send" />
             <br />

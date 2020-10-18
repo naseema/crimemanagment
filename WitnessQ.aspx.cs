@@ -14,6 +14,11 @@ namespace CrimeManagement
         protected void Page_Load(object sender, EventArgs e)
         {
             base.Page_Load(sender, e);
+            string v = Request.QueryString["id"];
+            if (v != null)
+            {
+                GetWitmessCrime(Request.QueryString["id"]);
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -29,6 +34,7 @@ namespace CrimeManagement
                 if (sqlr.Read())
                 {
                     Response.Redirect("Witness.aspx");
+                    Response.Redirect("~/Witness.aspx?TypeCrime=" + TypeBox.Text + "&Location=" + PlaceBox.Text);
                 }
                 else
                 {
@@ -41,7 +47,7 @@ namespace CrimeManagement
                 cmd.Dispose();
             }
 
-            //Response.Redirect("~/Witness.aspx?TypeCrime=" + TypeBox.Text + "&Location=" + PlaceBox.Text);
+            
         }
     }
 }

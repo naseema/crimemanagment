@@ -43,17 +43,17 @@ namespace CrimeManagement {
             }
         }
 
-        protected void AddCrime(/*string type, string Time, string Date,*/ string location, string description)
+        protected void AddCrime(string type, string location, string date, string time, string description)
         {
 
             SqlCommand cmd = sqlConnection.CreateCommand();
             cmd.CommandType = CommandType.Text;
 
             cmd.CommandText = "insert into crimes values('"
-                              + "type_null" + "','"
+                + type + "','"
                 + location + "','"
-                + new DateTime() + "','"
-                + new DateTime() + "','"
+                + date + "','"
+                + time + "','"
                 + description + "')";
 
             cmd.ExecuteNonQuery();
@@ -123,37 +123,37 @@ namespace CrimeManagement {
             return cmd;
         }
 
-        //protected CrimeW GetWitmessCrime(string id)
-        //{
-        //    SqlCommand cmd = sqlConnection.CreateCommand();
-        //    cmd.CommandType = CommandType.Text;
+        protected CrimeW GetWitmessCrime(string id)
+        {
+            SqlCommand cmd = sqlConnection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
 
-        //    cmd.CommandText = "Select * from Witness WHERE id=" + id;
-        //    SqlDataReader sqlr = null;
+            cmd.CommandText = "Select * from crimes WHERE location=" + id;
+            SqlDataReader sqlr = null;
 
-        //    try
-        //    {
-        //        sqlr = cmd.ExecuteReader();
-        //        if (sqlr.Read())
-        //        {
-        //            CrimeW w = new CrimeW();
-        //            w.Type = sqlr.GetString(5);
-        //            w.Place = sqlr.GetString(1);
-        //            w.Date = sqlr.GetString(2);
-        //            return w;
+            try
+            {
+                sqlr = cmd.ExecuteReader();
+                if (sqlr.Read())
+                {
+                    CrimeW w = new CrimeW();
+                    w.Type = sqlr.GetString(5);
+                    w.Place = sqlr.GetString(1);
+                    w.Date = sqlr.GetString(2);
+                    return w;
 
 
-        //        }
-        //        else
-        //        {
-        //            return null;
-        //        }
-        //    }
-        //    finally
-        //    {
-        //        sqlr?.Close();
-        //        cmd.Dispose();
-        //    }
-        //}
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            finally
+            {
+                sqlr?.Close();
+                cmd.Dispose();
+            }
+        }
     }
 }
