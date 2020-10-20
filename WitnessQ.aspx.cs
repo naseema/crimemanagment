@@ -14,12 +14,11 @@ namespace CrimeManagement
         protected void Page_Load(object sender, EventArgs e)
         {
             base.Page_Load(sender, e);
-            string v = Request.QueryString["id"];
-            if (v != null)
-            {
-                GetWitmessCrime(Request.QueryString["id"]);
-            }
+            // Manually register the event-handling method for
+            // the Click event of the Button control.
+            Button1.Click += new EventHandler(this.Button1_Click);
         }
+
 
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -33,8 +32,17 @@ namespace CrimeManagement
                 sqlr = cmd.ExecuteReader();
                 if (sqlr.Read())
                 {
-                    Response.Redirect("Witness.aspx");
-                    Response.Redirect("~/Witness.aspx?TypeCrime=" + TypeBox.Text + "&Location=" + PlaceBox.Text);
+                    // When the button is clicked,
+                    // change the button text, and disable it.
+
+                    Button clickedButton = (Button)sender;
+                    clickedButton.Text = "...button clicked...";
+                    clickedButton.Enabled = false;
+
+                    // Display the greeting label text.
+                    Label2.Visible = true;
+                    TextBox1.Visible = true;
+                    SendBtn.Visible = true;
                 }
                 else
                 {

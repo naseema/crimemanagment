@@ -123,37 +123,7 @@ namespace CrimeManagement {
             return cmd;
         }
 
-        protected CrimeW GetWitmessCrime(string id)
-        {
-            SqlCommand cmd = sqlConnection.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-
-            cmd.CommandText = "Select * from crimes WHERE location=" + id;
-            SqlDataReader sqlr = null;
-
-            try
-            {
-                sqlr = cmd.ExecuteReader();
-                if (sqlr.Read())
-                {
-                    CrimeW w = new CrimeW();
-                    w.Type = sqlr.GetString(5);
-                    w.Place = sqlr.GetString(1);
-                    w.Date = sqlr.GetString(2);
-                    return w;
-
-
-                }
-                else
-                {
-                    return null;
-                }
-            }
-            finally
-            {
-                sqlr?.Close();
-                cmd.Dispose();
-            }
-        }
+        
+        
     }
 }

@@ -34,14 +34,19 @@
             <asp:TextBox ID="DateBox" runat="server" TextMode="Date"></asp:TextBox>
             <br />
             <br />
-            <asp:GridView ID="GridView1" runat="server">
-            </asp:GridView>
-            <br />
-            <br />
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Find Crime " />
-            &nbsp;<asp:Button ID="Button2" runat="server" Text="send" />
+            <br />
+            <br />
+
+            <asp:Label ID="Label2" runat="server" Text="More details :" Visible="false"></asp:Label>
+        <asp:TextBox ID="TextBox1" runat="server" Visible="false"></asp:TextBox>
+            <br />
+            <br />
+            <asp:Button ID="SendBtn" runat="server" Text="Send" Visible="false" />
             <br />
         </div>
     </form>
 </body>
 </html>
+
+

@@ -86,7 +86,6 @@
     <Compile Include="BaseDataPage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CrimeW.cs" />
     <Compile Include="Crime.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

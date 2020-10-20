@@ -13,25 +13,7 @@ namespace CrimeManagement
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            base.Page_Load(sender, e);
 
-            if (!String.IsNullOrEmpty(Request.QueryString["id"]))
-            {
-                this.TextBox1.Text = Request.QueryString["id"];
-                CrimeW crime = GetWitmessCrime(Textplace.Text);
-                if (crime != null)
-                {
-                    TextBox2.Text = crime.Place;
-                }
-                else
-                {
-                    // TODO crime not found
-                }
-            }
-            else
-            {
-                // TODO bad params, show error
-            }
         }
 
     }
