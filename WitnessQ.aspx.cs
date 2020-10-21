@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 
+
 namespace CrimeManagement
 {
     public partial class WitnessQ : BaseDataPage
@@ -24,7 +25,7 @@ namespace CrimeManagement
         {
             SqlCommand cmd = sqlConnection.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "Select * from crimes WHERE location = '" + PlaceBox.Text + "' and type = '" + TypeBox.Text + "'";
+            cmd.CommandText = "Select * from crimes WHERE location = '" + PlaceBox.Text + "' and type = '" + DropDownType.Text + "'" ;
             //cmd.CommandText = "Select * from crimes WHERE type = '" + TypeBox.Text + "'" ;
             SqlDataReader sqlr = null;
             try
@@ -43,6 +44,8 @@ namespace CrimeManagement
                     Label2.Visible = true;
                     TextBox1.Visible = true;
                     SendBtn.Visible = true;
+                    
+
                 }
                 else
                 {
@@ -56,6 +59,24 @@ namespace CrimeManagement
             }
 
             
+        }
+        protected void FileBtn_Click(object sender, EventArgs e)
+        {
+            if (FileUpload1.HasFile)  //fileupload control contains a file  
+                try
+                {
+                    FileUpload1.SaveAs("E:\\" + FileUpload1.FileName);          // file path where you want to upload  
+                    Label1.Text = "File Uploaded Sucessfully !! " + FileUpload1.PostedFile.ContentLength + "mb";     // get the size of the uploaded file  
+                }
+                catch (Exception ex)
+                {
+                    Label1.Text = "File Not Uploaded!!" + ex.Message.ToString();
+                }
+            else
+            {
+                Label1.Text = "Please Select File and Upload Again";
+
+            }
         }
     }
 }

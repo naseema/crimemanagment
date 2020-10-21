@@ -79,6 +79,7 @@
     <Content Include="Thefts.aspx" />
     <Content Include="ViewCrime.aspx" />
     <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
     <Content Include="Witness.aspx" />
     <Content Include="WitnessQ.aspx" />
   </ItemGroup>
@@ -136,6 +137,13 @@
     </Compile>
     <Compile Include="ViewCrime.aspx.designer.cs">
       <DependentUpon>ViewCrime.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Witness.aspx.cs">
       <DependentUpon>Witness.aspx</DependentUpon>

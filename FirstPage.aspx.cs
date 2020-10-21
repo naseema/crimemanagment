@@ -21,7 +21,7 @@ namespace CrimeManagement
 
         protected void BtnWitness_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Witness.aspx");
+            Response.Redirect("WitnessQ.aspx");
         }
     }
 }

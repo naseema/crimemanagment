@@ -14,9 +14,11 @@
 <body>
     <form id="form1" runat="server">
         <div class="auto-style1">
-            <asp:Label ID="Label1" runat="server" Text="ID Crime"></asp:Label>
+            <br />
+            <asp:Label ID="Label1" runat="server" Text="Crime ID :"></asp:Label>
         &nbsp;<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
             <br />
+            <asp:Label ID="Label2" runat="server" Text="Details :"></asp:Label>
             <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
             <br />
             <br />
