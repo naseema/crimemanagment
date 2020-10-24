@@ -141,13 +141,13 @@ namespace CrimeManagement
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// TextBox1 control.
+        /// detailsBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox detailsBox;
 
         /// <summary>
         /// FileUpload1 control.
@@ -184,5 +184,14 @@ namespace CrimeManagement
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button SendBtn;
+
+        /// <summary>
+        /// GridView1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }

@@ -102,13 +102,24 @@ namespace CrimeManagement {
             }
         }
         
-        protected void GetCrimeReports(int id)
+        protected void GetWitness(int id)
         {
             //TODO
         }
 
-        protected void AddCrimeReport(string crimeId, string location, string description) {
-            //TODO
+        protected void AddWitness(int crimeId, string description)
+        {
+            
+            SqlCommand cmd = sqlConnection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "insert into Witness values("
+                           + "NULL,"
+                + crimeId + ",'"
+                + description + "')";
+
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
         }
 
         protected List<String> GetCrimeReports(String crimeId) {

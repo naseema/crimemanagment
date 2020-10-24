@@ -23,15 +23,17 @@
             <br />
             <br />
 
-            <asp:GridView ID="GridViewCrime" runat="server" DataKeyNames="CID"
-                OnRowDeleting="gridViewCrime_OnRowDeleting" 
-                OnSelectedIndexChanged="gridViewCrime_SelectedIndexChanged" OnRowCommand="gridViewCrime_RowCommand">
+            <br />
+            <br />
+            <asp:GridView ID="GridView1" runat="server">
                 <Columns>
-                    <asp:CommandField HeaderText="Update" ShowSelectButton="True" />
-                    <asp:CommandField HeaderText="Delete" ShowSelectButton="True" />
+                    <asp:TemplateField HeaderText="Delete">
+                        <ItemTemplate>
+                            <asp:Button ID="ButDelete" runat="server" Text="Delete" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
                 </Columns>
             </asp:GridView>
-            <br />
         </div>
     </form>
 </body>

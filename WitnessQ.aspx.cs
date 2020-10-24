@@ -20,6 +20,7 @@ namespace CrimeManagement
             Button1.Click += new EventHandler(this.Button1_Click);
         }
 
+        int crimeId;
 
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -42,10 +43,15 @@ namespace CrimeManagement
 
                     // Display the greeting label text.
                     Label2.Visible = true;
-                    TextBox1.Visible = true;
+                    detailsBox.Visible = true;
                     SendBtn.Visible = true;
-                    
 
+                    string CrimeId = Request.QueryString["id"];
+                    if (CrimeId != null)
+                    {
+                        GetCrime(Request.QueryString["id"]);
+                    }
+                   crimeId = Convert.ToInt16(CrimeId);
                 }
                 else
                 {
@@ -77,6 +83,12 @@ namespace CrimeManagement
                 Label1.Text = "Please Select File and Upload Again";
 
             }
+        }
+
+        protected void SendBtn_Click(object sender, EventArgs e)
+        {
+            AddWitness( crimeId , detailsBox.Text);
+
         }
     }
 }

@@ -22,30 +22,32 @@ namespace CrimeManagement
                 if (crime != null)
                 {
                     TextBox2.Text = crime.description;
-                } else
+                    ShowWitness(Request.QueryString["id"]);
+                }
+                else
                 {
                     // TODO crime not found
                 }
-            } else
+            }
+            else
             {
                 // TODO bad params, show error
             }
         }
 
-
-        protected void gridViewCrime_SelectedIndexChanged(object sender, EventArgs e)
+        private void ShowWitness(String crimeId)
         {
-
+            SqlCommand cmd = QueryData("Witness", "crimeId=" + crimeId);
+            DataTable data = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(data);
+            GridView1.DataSource = data;
+            GridView1.DataBind();
+            cmd.Dispose();
         }
 
-        protected void gridViewCrime_OnRowDeleting(object sender, GridViewDeleteEventArgs e)
-        {
-            
-        }
-
-        protected void gridViewCrime_RowCommand(object sender, GridViewCommandEventArgs e)
-        {
-
-        }
+        
     }
+
+        
 }
