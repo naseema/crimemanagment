@@ -91,6 +91,8 @@ namespace CrimeManagement {
                     c.description = sqlr.GetString(5);
                     c.type = sqlr.GetString(1);
                     c.location = sqlr.GetString(2);
+                    c.date = sqlr.GetDateTime(3);
+                    c.time = sqlr.GetTimeSpan(4);
                     return c;
                 }
                 else {
