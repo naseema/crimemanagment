@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Web;
@@ -90,6 +91,8 @@ namespace CrimeManagement {
                     c.description = sqlr.GetString(5);
                     c.type = sqlr.GetString(1);
                     c.location = sqlr.GetString(2);
+                    c.date = sqlr.GetDateTime(3);
+                    c.time = sqlr.GetTimeSpan(4);
                     return c;
                 }
                 else {
@@ -134,6 +137,7 @@ namespace CrimeManagement {
             return cmd;
         }
 
+
         protected void AddSuspects(string crimeID ,string SuspectName, string SuspectAge, string SuspectID, string Residence, string SocialStatus)
         {
 
@@ -152,6 +156,30 @@ namespace CrimeManagement {
             cmd.Dispose();
         }
 
+
+
+
+        /*protected DateTime ConvertTime() {
+        */
+        
+        protected DateTime ConvertDate(string dateValue) {
+            /* read date from ui and save it to DB*/
+            // string dateValue = "2020-10-30";
+            string pattern = "yyyy-MM-dd";
+            DateTime parsedDate;
+       
+            if (DateTime.TryParseExact(dateValue, pattern, null,
+                DateTimeStyles.None, out parsedDate))
+                Console.WriteLine("Converted '{0}' to {1:d}.",
+                    dateValue, parsedDate);
+            else
+                Console.WriteLine("Unable to convert '{0}' to a date and time.",
+                    dateValue);
+
+            return parsedDate;
+        }
+        
+        
 
     }
 }

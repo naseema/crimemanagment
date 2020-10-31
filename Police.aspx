@@ -30,11 +30,11 @@
         <br />
         <br/>
         <asp:Label ID="Label2" runat="server" Text="Time :" ForeColor="Black" Font-Bold="True" Font-Names="Franklin Gothic Demi Cond"></asp:Label>
-        <asp:TextBox ID="TimeID" runat="server" Height="22px"></asp:TextBox>
+        <asp:TextBox ID="TimeID" runat="server" TextMode="Time" Height="22px" ></asp:TextBox>
         <br />
         <br/>
         <asp:Label ID="Label3" runat="server" Text="Date :" ForeColor="Black" Font-Bold="True" Font-Names="Franklin Gothic Demi Cond"></asp:Label>
-        <asp:TextBox ID="DateID" runat="server" Height="22px"></asp:TextBox>
+        <asp:TextBox ID="DateID" runat="server" TextMode="Date" Height="22px"></asp:TextBox>
         <br />
         <br />
         <asp:Label ID="Label5" runat="server" Text="Place :" ForeColor="Black" Font-Bold="True" Font-Names="Franklin Gothic Demi Cond"></asp:Label>

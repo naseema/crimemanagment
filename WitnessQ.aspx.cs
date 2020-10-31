@@ -20,7 +20,8 @@ namespace CrimeManagement
             Button1.Click += new EventHandler(this.Button1_Click);
         }
 
-       static int crimeId;
+        static int crimeId;
+
 
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -53,7 +54,7 @@ namespace CrimeManagement
 
                     
                    crimeId = sqlr.GetInt32(0);
-                }
+        }
                 else
                 {
                     Response.Write(" Error");
@@ -88,7 +89,7 @@ namespace CrimeManagement
         protected void SendBtn_Click(object sender, EventArgs e)
         {
             AddWitness( crimeId , detailsBox.Text);
-
+            // TODO show "Witness was saved" page
         }
     }
 }

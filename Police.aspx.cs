@@ -11,10 +11,24 @@ namespace CrimeManagement {
     public partial class Police : BaseDataPage {
         protected void Page_Load(object sender, EventArgs e) {
             base.Page_Load(sender, e);
-            if (!Page.IsPostBack)
+            if (!IsPostBack) // To avoid refreshing the page when clicking a button
             {
+
                 Button4_Click(null, null); // Load crimes
             }
+
+
+                if (!Page.IsPostBack)
+                {
+                    Button4_Click(null, null); // Load crimes
+                }
+                string v = Request.QueryString["id"];
+                if (v != null)
+                {
+                    GetCrime(Request.QueryString["id"]);
+                }
+                SetCurrentDateTime();
+            
 
         }
         
@@ -41,10 +55,18 @@ namespace CrimeManagement {
             cmd.Dispose();
         }
 
+        private void SetCurrentDateTime() {
+            TimeID.Text = DateTime.Now.ToString("HH:mm"); // HH = 24h format
+            DateID.Text = DateTime.UtcNow.ToString("yyyy-MM-dd");
+        }
+        
         protected void Button5_Click(object sender, EventArgs e)
         {
             AddCrime(TB_CrimeType.Text, PlaceID.Text, DateID.Text, TimeID.Text, TB_Details.Text); 
-            Button4_Click(null, null); // Load crimes
+            // Button4_Click(null, null); // Load crimes
+            PlaceID.Text = DateID.Text;
+            TB_Details.Text = ConvertDate(DateID.Text).ToString();
+            
         }
 
         protected void grid_crimes_SelectedIndexChanged(object sender, EventArgs e)

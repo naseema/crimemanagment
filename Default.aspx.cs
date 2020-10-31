@@ -72,7 +72,9 @@ namespace CrimeManagement {
             DisplayDataFromTable(grid_crimes, "crimes");
         }
 
-        protected void ShowAllCrimesReports_Click(object sender, EventArgs e) { }
+        protected void ShowAllCrimesReports_Click(object sender, EventArgs e) {
+            DisplayDataFromTable(grid_crimes, "Witness");
+        }
 
         protected void SearchCrime_Click(object sender, EventArgs e) {
             SqlCommand cmd = QueryData("crimes", "description LIKE '%" + SearchCrimeTB.Text + "%'");
