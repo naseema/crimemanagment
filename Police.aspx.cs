@@ -58,9 +58,6 @@ namespace CrimeManagement {
         {
             AddCrime(TB_CrimeType.Text, PlaceID.Text, DateID.Text, TimeID.Text, TB_Details.Text); 
             // Button4_Click(null, null); // Load crimes
-            PlaceID.Text = DateID.Text;
-            TB_Details.Text = ConvertDate(DateID.Text).ToString();
-            
         }
 
         protected void grid_crimes_SelectedIndexChanged(object sender, EventArgs e)
