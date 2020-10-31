@@ -26,7 +26,8 @@ namespace CrimeManagement
         {
             SqlCommand cmd = sqlConnection.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "Select * from crimes WHERE location = '" + PlaceBox.Text + "' and type = '" + DropDownType.Text + "'" ;
+            cmd.CommandText = "Select * from crimes WHERE location = '" + PlaceBox.Text + "' and type = '" + DropDownType.Text + "' " +
+                              "AND time like '"+TimeBox.Text +"%' AND date='" + DateBox.Text + "'";
             SqlDataReader sqlr = null;
             try
             {
