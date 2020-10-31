@@ -47,6 +47,9 @@
         <br/>
         <asp:Button ID="Button5" runat="server" Text="Add Crime" OnClick="Button5_Click" BackColor="#666666" BorderColor="#333333" BorderStyle="Solid" ForeColor="White" Height="33px" Width="150px" Font-Names="Franklin Gothic Demi" Font-Size="Medium"/>
 
+        &nbsp;&nbsp;
+        <asp:Button ID="Button6" runat="server" BackColor="#666666" BorderColor="#333333" BorderStyle="Solid" Font-Names="Franklin Gothic Demi" Font-Size="Medium" ForeColor="White" Height="33px" OnClick="Button6_Click" Text="Suspects Page" Width="150px" />
+
         <br/>
         <br/>
 

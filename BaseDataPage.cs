@@ -134,7 +134,24 @@ namespace CrimeManagement {
             return cmd;
         }
 
-        
-        
+        protected void AddSuspects(string crimeID ,string SuspectName, string SuspectAge, string SuspectID, string Residence, string SocialStatus)
+        {
+
+            SqlCommand cmd = sqlConnection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "insert into Suspects values('"
+                + crimeID + "','"
+                + SuspectName + "','"
+                + SuspectAge + "','"
+                + SuspectID + "','"
+                + Residence + "','"
+                + SocialStatus + "')";
+
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
+        }
+
+
     }
 }

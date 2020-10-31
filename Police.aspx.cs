@@ -15,11 +15,7 @@ namespace CrimeManagement {
             {
                 Button4_Click(null, null); // Load crimes
             }
-            string v = Request.QueryString["id"];
-            if (v != null)
-            {
-                GetCrime(Request.QueryString["id"]);
-            }
+
         }
         
         protected void GridCrimes_RowCommand(Object sender, GridViewCommandEventArgs e) {
@@ -56,6 +52,9 @@ namespace CrimeManagement {
             Response.Redirect("~/ViewCrime.aspx?Location=" + TB_CrimeType.Text + "&Details=" + TB_Details.Text);
         }
 
-       
+        protected void Button6_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Suspects.aspx");
+        }
     }
 }

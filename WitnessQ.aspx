@@ -45,7 +45,7 @@
             <br />
             <br />
             <asp:Label ID="LabelDate" runat="server" Text="Date :" Font-Size="Large"></asp:Label>
-            <asp:TextBox ID="DateBox" runat="server" TextMode="Date" Height="26px" Width="160px"></asp:TextBox>
+            <asp:TextBox ID="DateBox" runat="server" Height="26px" Width="160px"></asp:TextBox>
             <br />
             <br />
             <br />

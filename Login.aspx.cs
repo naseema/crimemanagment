@@ -16,19 +16,20 @@ namespace CrimeManagment
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-        
+           
         //    cmd.CommandText = "select * from users where username='" + TxtUserName.Text + "','" + TxtPassword.Text + "')";
             if (IsUserExist(TxtUserName.Text, TxtPassword.Text))
             {
-
+                
                 Response.Redirect("Police.aspx");
-
+                //Response.Redirect("~/ Police.aspx ? username=" + TxtUserName);
             }
             else
             {
                 Response.Write( "Login failed!");
             }
 
+            
         }
     }
 }

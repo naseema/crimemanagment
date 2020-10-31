@@ -20,13 +20,19 @@ namespace CrimeManagement
             Button1.Click += new EventHandler(this.Button1_Click);
         }
 
-        int crimeId;
+       static int crimeId;
 
         protected void Button1_Click(object sender, EventArgs e)
         {
             SqlCommand cmd = sqlConnection.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "Select * from crimes WHERE location = '" + PlaceBox.Text + "' and type = '" + DropDownType.Text + "'" ;
+            cmd.CommandText = "Select * from crimes WHERE location = '" + PlaceBox.Text + "' and type = '" + DropDownType.Text +"'";
+           // id = 88
+           // T.Z = 
+           // name = dan
+           // -----
+           // CrimesSuspects
+           // crimeId, susbectID, isCommited=true/false   800, 88, 900, 88
             SqlDataReader sqlr = null;
             try
             {
@@ -45,12 +51,8 @@ namespace CrimeManagement
                     detailsBox.Visible = true;
                     SendBtn.Visible = true;
 
-                    string CrimeId = Request.QueryString["id"];
-                    if (CrimeId != null)
-                    {
-                        GetCrime(Request.QueryString["id"]);
-                    }
-                   crimeId = Convert.ToInt16(CrimeId);
+                    
+                   crimeId = sqlr.GetInt32(0);
                 }
                 else
                 {
@@ -63,7 +65,6 @@ namespace CrimeManagement
                 cmd.Dispose();
             }
 
-            
         }
         protected void FileBtn_Click(object sender, EventArgs e)
         {
