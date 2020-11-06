@@ -28,6 +28,9 @@
             <asp:Label ID="Label5" runat="server" Text="Social Status :"></asp:Label>
             <asp:TextBox ID="SusStatus" runat="server"></asp:TextBox>
             <br />
+            <asp:Label ID="Label7" runat="server" Text="Date :"></asp:Label>
+            <asp:TextBox ID="DateID" runat="server"></asp:TextBox>
+            <br />
             <asp:Label ID="Label6" runat="server" Text="Crime ID :"></asp:Label>
             <asp:TextBox ID="CrimeID" runat="server"></asp:TextBox>
             <br />
@@ -41,7 +44,7 @@
                 <Columns>
                     <asp:TemplateField HeaderText="Delete">
                         <ItemTemplate>
-                            <asp:Button ID="ButDelete" runat="server" Text="Delete"/>
+                            <asp:Button ID="ButDelete" runat="server" Text="Delete" CommandArgument='<%# Eval("ID") %>'  CommandName="DeleteSuspect"/>
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>

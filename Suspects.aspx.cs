@@ -14,6 +14,13 @@ namespace CrimeManagement
         protected void Page_Load(object sender, EventArgs e)
         {
             base.Page_Load(sender, e);
+            if (!IsPostBack)
+            {
+
+                Button1_Click(null, null);
+            }
+           
+            SetCurrentDateTime();
         }
        
         protected void graidSuspect_SelectedIndexChanged(object sender, EventArgs e)
@@ -23,10 +30,15 @@ namespace CrimeManagement
         protected void graidSuspect_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             e.Cancel = true;
-            ((GridView)sender).DataBind();
+            
         }
         protected void graidSuspect_RowCommand(Object sender, GridViewCommandEventArgs e)
         {
+            if (e.CommandName == "DeleteSuspect")
+            {
+                DeleteSuspect(int.Parse(e.CommandArgument.ToString()));
+                Button1_Click(null, null);
+            }
         }
         public void DisplayDataFromTable(GridView gridView, string tabelName)
         {
@@ -44,8 +56,13 @@ namespace CrimeManagement
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
-            AddSuspects(CrimeID.Text ,SusName.Text, SusAge.Text, SusID.Text, SusResidence.Text, SusStatus.Text);
+           
+            AddSuspects(CrimeID.Text ,SusName.Text, SusAge.Text, SusID.Text, SusResidence.Text, SusStatus.Text, DateID.Text);
             DisplayDataFromTable(GridSuspects, "Suspects");
+        }
+        private void SetCurrentDateTime()
+        {
+            DateID.Text = DateTime.UtcNow.ToString("yyyy-MM-dd");
         }
     }
 }

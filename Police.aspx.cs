@@ -15,18 +15,7 @@ namespace CrimeManagement {
             {
 
                 Button4_Click(null, null); // Load crimes
-            }
-
-
-                if (!Page.IsPostBack)
-                {
-                    Button4_Click(null, null); // Load crimes
-                }
-                string v = Request.QueryString["id"];
-                if (v != null)
-                {
-                    GetCrime(Request.QueryString["id"]);
-                }
+            }                
                 SetCurrentDateTime();
             
 

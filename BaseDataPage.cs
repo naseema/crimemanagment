@@ -138,7 +138,7 @@ namespace CrimeManagement {
         }
 
 
-        protected void AddSuspects(string crimeID ,string SuspectName, string SuspectAge, string SuspectID, string Residence, string SocialStatus)
+        protected void AddSuspects(string crimeID ,string SuspectName, string SuspectAge, string SuspectID, string Residence, string SocialStatus , string Date)
         {
 
             SqlCommand cmd = sqlConnection.CreateCommand();
@@ -150,18 +150,28 @@ namespace CrimeManagement {
                 + SuspectAge + "','"
                 + SuspectID + "','"
                 + Residence + "','"
-                + SocialStatus + "')";
+                + SocialStatus + "','" 
+                + Date +"')";
+
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
+        }
+
+        protected void DeleteSuspect(int id)
+        {
+            SqlCommand cmd = sqlConnection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "DELETE FROM Suspects WHERE id=" + id;
 
             cmd.ExecuteNonQuery();
             cmd.Dispose();
         }
 
 
-
-
         /*protected DateTime ConvertTime() {
         */
-        
+
         protected DateTime ConvertDate(string dateValue) {
             /* read date from ui and save it to DB*/
             // string dateValue = "2020-10-30";

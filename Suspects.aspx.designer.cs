@@ -114,6 +114,24 @@ namespace CrimeManagement
         protected global::System.Web.UI.WebControls.TextBox SusStatus;
 
         /// <summary>
+        /// Label7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label7;
+
+        /// <summary>
+        /// DateID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox DateID;
+
+        /// <summary>
         /// Label6 control.
         /// </summary>
         /// <remarks>
