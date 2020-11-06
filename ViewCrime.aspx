@@ -21,6 +21,11 @@
             <asp:Label ID="Label2" runat="server" Text="Details :"></asp:Label>
             <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
             <br />
+            &nbsp;<asp:Label ID="Label3" runat="server" Text="Place :"></asp:Label>
+&nbsp;
+            <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+            <br />
+            <br />
             <br />
 
             <br />

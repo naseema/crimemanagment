@@ -26,7 +26,10 @@
         <br/>
         <br/>
         <asp:Label ID="Label1" runat="server" Text="Crime Type :" ForeColor="Black" Font-Bold="True" Font-Italic="False" Font-Names="Franklin Gothic Demi Cond" Font-Overline="False" Font-Strikeout="False" Font-Underline="False"></asp:Label>
-        <asp:TextBox ID="TB_CrimeType" runat="server" Height="22px"></asp:TextBox>
+        &nbsp;<asp:DropDownList ID="TB_CrimeType" runat="server">
+            <asp:ListItem>Murder</asp:ListItem>
+            <asp:ListItem>Theft</asp:ListItem>
+        </asp:DropDownList>
         <br />
         <br/>
         <asp:Label ID="Label2" runat="server" Text="Time :" ForeColor="Black" Font-Bold="True" Font-Names="Franklin Gothic Demi Cond"></asp:Label>

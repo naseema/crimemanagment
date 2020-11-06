@@ -15,7 +15,7 @@ namespace CrimeManagement {
             {
                 if (!Page.IsPostBack)
                 {
-                    //Button4_Click(null, null); // Load crimes
+                    Button4_Click(null, null); // Load crimes
                 }
              
                 SetCurrentDateTime();
@@ -58,7 +58,7 @@ namespace CrimeManagement {
 
         protected void grid_crimes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Response.Redirect("~/ViewCrime.aspx?Location=" + TB_CrimeType.Text + "&Details=" + TB_Details.Text);
+            Response.Redirect("~/ViewCrime.aspx?Location=" + TB_CrimeType.Text + "&Details=" + TB_Details.Text + "&place=" + PlaceID /*+ "&Time=" + TimeID + "&Date=" + DateID*/);
         }
 
         protected void Button6_Click(object sender, EventArgs e)

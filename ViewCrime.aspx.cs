@@ -22,6 +22,9 @@ namespace CrimeManagement
                 if (crime != null)
                 {
                     TextBox2.Text = crime.description;
+                    TextBox3.Text = crime.location;
+                    //TextBox4.Text = crime.time;
+                    //TextBox5.Text = crime.date;
                     ShowWitness(Request.QueryString["id"]);
                 }
                 else
