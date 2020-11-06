@@ -116,8 +116,7 @@ namespace CrimeManagement {
             SqlCommand cmd = sqlConnection.CreateCommand();
             cmd.CommandType = CommandType.Text;
 
-            cmd.CommandText = "insert into Witness values("
-                           + "NULL,"
+            cmd.CommandText = "insert into Witness (CrimeID, Details) values("
                 + crimeId + ",'"
                 + description + "')";
 

@@ -27,13 +27,8 @@ namespace CrimeManagement
         {
             SqlCommand cmd = sqlConnection.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "Select * from crimes WHERE location = '" + PlaceBox.Text + "' and type = '" + DropDownType.Text +"'";
-           // id = 88
-           // T.Z = 
-           // name = dan
-           // -----
-           // CrimesSuspects
-           // crimeId, susbectID, isCommited=true/false   800, 88, 900, 88
+            cmd.CommandText = "Select * from crimes WHERE location = '" + PlaceBox.Text + "' and type = '" + DropDownType.Text + "' " +
+                              "AND time like '"+TimeBox.Text +"%' AND date='" + DateBox.Text + "'";
             SqlDataReader sqlr = null;
             try
             {
@@ -51,10 +46,8 @@ namespace CrimeManagement
                     Label2.Visible = true;
                     detailsBox.Visible = true;
                     SendBtn.Visible = true;
-
-                    
-                   crimeId = sqlr.GetInt32(0);
-        }
+                    crimeId = sqlr.GetInt32(0);
+                }
                 else
                 {
                     Response.Write(" Error");

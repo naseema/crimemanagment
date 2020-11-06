@@ -13,12 +13,13 @@ namespace CrimeManagement {
             base.Page_Load(sender, e);
             if (!IsPostBack) // To avoid refreshing the page when clicking a button
             {
-
-                Button4_Click(null, null); // Load crimes
-            }                
+                if (!Page.IsPostBack)
+                {
+                    //Button4_Click(null, null); // Load crimes
+                }
+             
                 SetCurrentDateTime();
-            
-
+            }
         }
         
         protected void GridCrimes_RowCommand(Object sender, GridViewCommandEventArgs e) {
@@ -52,10 +53,7 @@ namespace CrimeManagement {
         protected void Button5_Click(object sender, EventArgs e)
         {
             AddCrime(TB_CrimeType.Text, PlaceID.Text, DateID.Text, TimeID.Text, TB_Details.Text); 
-            // Button4_Click(null, null); // Load crimes
-            PlaceID.Text = DateID.Text;
-            TB_Details.Text = ConvertDate(DateID.Text).ToString();
-            
+            Button4_Click(null, null); // Load crimes
         }
 
         protected void grid_crimes_SelectedIndexChanged(object sender, EventArgs e)
