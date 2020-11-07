@@ -190,5 +190,39 @@ namespace CrimeManagement {
         
         
 
+        protected void AddSuspectToCrime(string crimeId, string suspectId) {
+            SqlCommand cmd = sqlConnection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "insert into CrimeSuspects values("
+                              + crimeId + ","
+                              + suspectId + ","
+                              + 0 +")"; // 0 = not committed
+
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
+        }
+        
+        protected void DeleteSuspectFromCrime(string crimeId, string suspectId) {
+            SqlCommand cmd = sqlConnection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "DELETE from CrimeSuspects  WHERE crimeId="+crimeId+ " AND SuspectsID=" + suspectId;
+
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
+        } 
+        
+        protected void ChangeSuspectCommittedCrime(string crimeId, string suspectId, bool isCommited) {
+            SqlCommand cmd = sqlConnection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "UPDATE  CrimeSuspects SET is_committed = " + (isCommited ? 1 : 0) 
+                + " WHERE crimeId="+crimeId+ " AND SuspectsID=" + suspectId;
+
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
+        }
+
     }
 }
