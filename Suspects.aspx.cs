@@ -37,7 +37,6 @@ namespace CrimeManagement
             if (e.CommandName == "DeleteSuspect")
             {
                 DeleteSuspect(int.Parse(e.CommandArgument.ToString()));
-                Button1_Click(null, null);
             }
         }
         public void DisplayDataFromTable(GridView gridView, string tabelName)

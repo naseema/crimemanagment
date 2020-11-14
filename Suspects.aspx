@@ -44,7 +44,7 @@
                 <Columns>
                     <asp:TemplateField HeaderText="Delete">
                         <ItemTemplate>
-                            <asp:Button ID="ButDelete" runat="server" Text="Delete" CommandArgument='<%# Eval("ID") %>'  CommandName="DeleteSuspect"/>
+                            <asp:Button ID="ButDelete" runat="server" Text="Delete"  CommandName="DeleteSuspect" CommandArgument='<%# Eval("ID") %>'/>
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>

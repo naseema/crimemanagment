@@ -73,15 +73,13 @@
     </Content>
     <Content Include="Default.aspx" />
     <Content Include="FirstPage.aspx" />
+    <Content Include="imagePage.aspx" />
     <Content Include="Login.aspx" />
-    <Content Include="Murders.aspx" />
     <Content Include="Police.aspx" />
     <Content Include="Suspects.aspx" />
-    <Content Include="Thefts.aspx" />
     <Content Include="ViewCrime.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
-    <Content Include="Witness.aspx" />
     <Content Include="WitnessQ.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -103,19 +101,22 @@
     <Compile Include="FirstPage.aspx.designer.cs">
       <DependentUpon>FirstPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Handler1.ashx.cs">
+      <DependentUpon>Handler1.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="imagePage.aspx.cs">
+      <DependentUpon>imagePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="imagePage.aspx.designer.cs">
+      <DependentUpon>imagePage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Murders.aspx.cs">
-      <DependentUpon>Murders.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Murders.aspx.designer.cs">
-      <DependentUpon>Murders.aspx</DependentUpon>
     </Compile>
     <Compile Include="Police.aspx.cs">
       <DependentUpon>Police.aspx</DependentUpon>
@@ -132,13 +133,6 @@
     <Compile Include="Suspects.aspx.designer.cs">
       <DependentUpon>Suspects.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Thefts.aspx.cs">
-      <DependentUpon>Thefts.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Thefts.aspx.designer.cs">
-      <DependentUpon>Thefts.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ViewCrime.aspx.cs">
       <DependentUpon>ViewCrime.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -153,13 +147,6 @@
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Witness.aspx.cs">
-      <DependentUpon>Witness.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Witness.aspx.designer.cs">
-      <DependentUpon>Witness.aspx</DependentUpon>
-    </Compile>
     <Compile Include="WitnessQ.aspx.cs">
       <DependentUpon>WitnessQ.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -169,6 +156,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Handler1.ashx" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

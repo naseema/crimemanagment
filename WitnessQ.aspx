@@ -75,6 +75,8 @@
                     </asp:TemplateField>
                 </Columns>
             </asp:GridView>
+            <br />
+            <asp:Button ID="ImageID" runat="server" Text="Add Image" />
         </div>
     </form>
 </body>

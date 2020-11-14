@@ -161,7 +161,7 @@ namespace CrimeManagement {
             SqlCommand cmd = sqlConnection.CreateCommand();
             cmd.CommandType = CommandType.Text;
 
-            cmd.CommandText = "DELETE FROM Suspects WHERE id=" + id;
+            cmd.CommandText = "DELETE from Suspects WHERE id=" + id;
 
             cmd.ExecuteNonQuery();
             cmd.Dispose();

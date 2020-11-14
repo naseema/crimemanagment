@@ -9,6 +9,9 @@ using System.Data.SqlClient;
 
 namespace CrimeManagement {
     public partial class Default : BaseDataPage {
+        internal string query;
+        internal SqlConnection con;
+
         protected void Page_Load(object sender, EventArgs e) {
             base.Page_Load(sender, e);
 
@@ -32,6 +35,11 @@ namespace CrimeManagement {
             DisplayDataFromUsers();
 
             ShowAllCrimes_Click(null, null);
+        }
+
+        internal void connection()
+        {
+            throw new NotImplementedException();
         }
 
         protected void Button2_Click(object sender, EventArgs e) {
