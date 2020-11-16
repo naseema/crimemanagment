@@ -118,7 +118,7 @@ namespace CrimeManagement {
 
             cmd.CommandText = "insert into Witness (CrimeID, Details, wimage) values("
                 + crimeId + ",'"
-                + description + ",'"
+                + description + "','"
                 + imageBytes + "')";
 
             cmd.ExecuteNonQuery();

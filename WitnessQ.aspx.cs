@@ -10,6 +10,7 @@ using System.Data.SqlClient;
 
 namespace CrimeManagement {
     public partial class WitnessQ : BaseDataPage {
+        static string fileData;
         protected void Page_Load(object sender, EventArgs e) {
             base.Page_Load(sender, e);
             if (!IsPostBack) // To avoid refreshing the page when clicking a button
@@ -25,11 +26,8 @@ namespace CrimeManagement {
             {    
                 if (FileUpload1.HasFile) {
                     Label1.Text = FileUpload1.FileName;
-                    ImageContainer.ImageUrl = "data:image;base64," + Convert.ToBase64String(FileUpload1.FileBytes);
-                }
-                else {
-                    Label1.Text = null;
-                    ImageContainer.ImageUrl = null;
+                    fileData = Convert.ToBase64String(FileUpload1.FileBytes);
+                    ImageContainer.ImageUrl = "data:image;base64," + fileData;
                 }
             }
  
@@ -89,7 +87,7 @@ namespace CrimeManagement {
         }
 
         protected void SendBtn_Click(object sender, EventArgs e) {
-            AddWitness(crimeId, detailsBox.Text, Convert.ToBase64String(FileUpload1.FileBytes));
+            AddWitness(crimeId, detailsBox.Text, fileData);
         }
 
         protected void OnUploadChange(object sender, EventArgs e) {
