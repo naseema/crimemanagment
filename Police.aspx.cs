@@ -19,6 +19,10 @@ namespace CrimeManagement {
                 }
              
                 SetCurrentDateTime();
+                if (Session["policeName"] != null)
+                {
+                    PoliceName.Text = Session["policeName"].ToString();
+                }
             }
         }
         
