@@ -14,11 +14,16 @@
             margin-left:18%;
             
         }
+        #Image1{
+            float:right;
+            margin-top:33%;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
+            <asp:Image ID="Image1" runat="server" src="https://www.callcentrehelper.com/images/stories/2020/02/robotic-process-automation-760.jpg" Height="350px" Width="450px" />
             <br />
             
             <asp:Label ID="Label5" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="Welcome " CssClass="style1"></asp:Label>

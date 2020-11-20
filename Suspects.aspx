@@ -9,33 +9,33 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Label ID="Label1" runat="server" Text="Name :"></asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="Name :" Font-Bold="True"></asp:Label>
             <asp:TextBox ID="SusName" runat="server"></asp:TextBox>
             <br />
 
-            <asp:Label ID="Label2" runat="server" Text="Age :"></asp:Label>
+            <asp:Label ID="Label2" runat="server" Text="Age :" Font-Bold="True"></asp:Label>
             <asp:TextBox ID="SusAge" runat="server"></asp:TextBox>
             <br />
 
-            <asp:Label ID="Label3" runat="server" Text="ID :"></asp:Label>
+            <asp:Label ID="Label3" runat="server" Text="ID :" Font-Bold="True"></asp:Label>
             <asp:TextBox ID="SusID" runat="server"></asp:TextBox>
             <br />
 
-            <asp:Label ID="Label4" runat="server" Text="Residence :"></asp:Label>
+            <asp:Label ID="Label4" runat="server" Text="Residence :" Font-Bold="True"></asp:Label>
             <asp:TextBox ID="SusResidence" runat="server"></asp:TextBox>
             <br />
 
-            <asp:Label ID="Label5" runat="server" Text="Social Status :"></asp:Label>
+            <asp:Label ID="Label5" runat="server" Text="Social Status :" Font-Bold="True"></asp:Label>
             <asp:TextBox ID="SusStatus" runat="server"></asp:TextBox>
             <br />
-            <asp:Label ID="Label7" runat="server" Text="Date :"></asp:Label>
+            <asp:Label ID="Label7" runat="server" Text="Date :" Font-Bold="True"></asp:Label>
             <asp:TextBox ID="DateID" runat="server"></asp:TextBox>
             <br />
-            <asp:Label ID="Label6" runat="server" Text="Crime ID :"></asp:Label>
+            <asp:Label ID="Label6" runat="server" Text="Crime ID :" Font-Bold="True"></asp:Label>
             <asp:TextBox ID="CrimeID" runat="server"></asp:TextBox>
             <br />
             <br />
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Add Suspects" />
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Add Suspects" BorderColor="#006699" BorderStyle="Solid" Font-Bold="True" />
             <br />
 
             <asp:GridView ID="GridSuspects" runat="server"

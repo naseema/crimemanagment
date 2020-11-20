@@ -9,19 +9,22 @@
         .auto-style1 {
             height: 247px;
         }
+        body{
+            background-color: lightsteelblue;
+        }
     </style>
 </head>
 <body>
 <form id="form1" runat="server">
     <div class="auto-style1">
         <br/>
-        <asp:Label ID="Label1" runat="server" Text="Crime ID :"></asp:Label>
-        &nbsp;<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:Label ID="Label1" runat="server" Text="Crime ID :" Font-Bold="True" ForeColor="Black"></asp:Label>
+        &nbsp;<asp:TextBox ID="TextBox1" runat="server" Font-Bold="False"></asp:TextBox>
         <br/>
-        <asp:Label ID="Label2" runat="server" Text="Details :"></asp:Label>
+        <asp:Label ID="Label2" runat="server" Text="Details :" Font-Bold="True"></asp:Label>
         <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
         <br/>
-        &nbsp;<asp:Label ID="Label3" runat="server" Text="Place :"></asp:Label>
+        &nbsp;<asp:Label ID="Label3" runat="server" Text="Place :" Font-Bold="True"></asp:Label>
         &nbsp;
         <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
         <br/>
@@ -30,7 +33,7 @@
 
         <br/>
         <br/>
-        <asp:GridView ID="GridView1" runat="server">
+        <asp:GridView ID="GridView1" runat="server" BorderColor="Black" ForeColor="Black" BackColor="#CCCCCC">
             <Columns>
                 <asp:TemplateField HeaderText="Delete">
                     <ItemTemplate>
@@ -49,7 +52,7 @@
         
         <asp:TextBox ID="FilterSusbectTB" runat="server" OnTextChanged="FilterSusbectTB_TextChanged" placeholder="Search suspect by name"
                      AutoPostBack="true"/>
-        <asp:GridView ID="GridViewAddSuspects" runat="server" OnRowCommand="Suspects_RowCommand">
+        <asp:GridView ID="GridViewAddSuspects" runat="server" OnRowCommand="Suspects_RowCommand" BorderColor="Black" BackColor="#CCCCCC">
             <Columns>
                 <asp:TemplateField HeaderText="Add Suspect">
                     <ItemTemplate>
@@ -63,7 +66,7 @@
         <%-- Show suspects--%>
         <br/>
 
-        <asp:GridView ID="GridViewSuspects" runat="server" OnRowCommand="Suspects_RowCommand">
+        <asp:GridView ID="GridViewSuspects" runat="server" OnRowCommand="Suspects_RowCommand" BorderColor="Black" BackColor="#CCCCCC">
             <Columns>
                 <asp:TemplateField HeaderText="Delete Suspect">
                     <ItemTemplate>

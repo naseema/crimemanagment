@@ -60,7 +60,7 @@
 
         <asp:GridView id="grid_crimes" runat="server"
                       OnRowCommand="GridCrimes_RowCommand"
-                      OnRowDeleting="GridCrimes_OnRowDeleting" OnSelectedIndexChanged="grid_crimes_SelectedIndexChanged" BackColor="#99CCFF" BorderColor="#666666" BorderStyle="Solid" ForeColor="Black" Height="200px" Width="300px">
+                      OnRowDeleting="GridCrimes_OnRowDeleting" OnSelectedIndexChanged="grid_crimes_SelectedIndexChanged" BackColor="#99CCFF" BorderColor="#666666" ForeColor="Black" Height="200px" Width="300px">
             <Columns>
 
                 <asp:HyperLinkField Text="View"
