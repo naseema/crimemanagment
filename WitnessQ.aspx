@@ -23,7 +23,6 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Image ID="Image1" runat="server" src="https://www.callcentrehelper.com/images/stories/2020/02/robotic-process-automation-760.jpg" Height="350px" Width="450px" />
             <br />
             
             <asp:Label ID="Label5" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="Welcome " CssClass="style1"></asp:Label>
@@ -58,33 +57,26 @@
             <br />
             <br />
 
-            <asp:Label ID="Label2" runat="server" Text="More details :" Visible="False" Font-Size="Large"></asp:Label>
+        <asp:Label ID="Label2" runat="server" Text="More details :" Visible="False" Font-Size="Large"></asp:Label>
         <asp:TextBox ID="detailsBox" runat="server" Visible="false" Height="26px" Width="160px"></asp:TextBox>
-            <br />
-            <br />
-             <asp:FileUpload ID="FileUpload1" runat="server" />  
-        <p>  
+        <br/>
+        <asp:FileUpload Visible="false"  ID="FileUpload1" runat="server" onchange="this.form.submit()"/>
+        <%--
             <asp:Button ID="FileBtn" runat="server" OnClick="Button1_Click" Text="Upload"/> 
-            
-            &nbsp;<asp:Label ID="Label1" runat="server" Font-Size="Medium" Text="Label"></asp:Label>  
-        </p>
-            <asp:Button ID="SendBtn" runat="server" Text="Send" Visible="false" BorderStyle="Solid" Font-Bold="True" Font-Size="Large" Height="32px" Width="113px" OnClick="SendBtn_Click" />
-            <br />
-            
-            <asp:GridView ID="GridView1" runat="server">
-                <Columns>
-                    <asp:TemplateField HeaderText="Delete">
-                          <ItemTemplate>
-                              <asp:Button ID="DeleteID" runat="server" Text="Delete" />
-                          </ItemTemplate>
-                    </asp:TemplateField>
-                </Columns>
-            </asp:GridView>
-            <br />
-            <asp:Button ID="ImageID" runat="server" Text="Add Image" />
-        </div>
-    </form>
+            --%>
+
+        <br/>
+        <asp:Image ID="ImageContainer" runat="server" style="max-height:150px;"/>
+        <br/>
+        <asp:Label ID="Label1" runat="server" Font-Size="Medium" Text=""/>
+
+        <asp:Button ID="SendBtn" runat="server" Text="Send" Visible="false" BorderStyle="Solid" Font-Bold="True" Font-Size="Large" Height="32px" Width="113px" OnClick="SendBtn_Click"/>
+        <br/>
+        
+        <br/>
+        <%-- <asp:Button ID="ImageID" runat="server" Text="Add Image"/> --%>
+
+    </div>
+</form>
 </body>
 </html>
-
-

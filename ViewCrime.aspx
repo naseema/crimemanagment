@@ -33,11 +33,20 @@
 
         <br/>
         <br/>
-        <asp:GridView ID="GridView1" runat="server" BorderColor="Black" ForeColor="Black" BackColor="#CCCCCC">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC">
             <Columns>
-                <asp:TemplateField HeaderText="Delete">
+
+                <%--<asp:TemplateField HeaderText="Delete">
                     <ItemTemplate>
                         <asp:Button ID="ButDelete" runat="server" Text="Delete"/>
+                    </ItemTemplate>
+                </asp:TemplateField>--%>
+                
+                <asp:BoundField DataField="ID" HeaderText="ID" />
+                <asp:BoundField DataField="Details" HeaderText="Details" />
+                <asp:TemplateField HeaderText="IMG">
+                    <ItemTemplate>
+                        <asp:Image ID="Image1" runat="server" Visible='<%# Eval("wimage").ToString().Length > 0 %>'  ImageUrl='<%# "data:image;base64, " + Eval("wimage") %>' style="max-height:50px;"/>
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>

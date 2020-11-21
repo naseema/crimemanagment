@@ -20,7 +20,8 @@ namespace CrimeManagment
         //    cmd.CommandText = "select * from users where username='" + TxtUserName.Text + "','" + TxtPassword.Text + "')";
             if (IsUserExist(TxtUserName.Text, TxtPassword.Text))
             {
-                
+                Session.Add("policeName", TxtUserName.Text);
+                Session["test"] = "test";
                 Response.Redirect("Police.aspx");
                 //Response.Redirect("~/ Police.aspx ? username=" + TxtUserName);
             }

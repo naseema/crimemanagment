@@ -110,15 +110,16 @@ namespace CrimeManagement {
             //TODO
         }
 
-        protected void AddWitness(int crimeId, string description)
+        protected void AddWitness(int crimeId, string description, string imageBytes)
         {
             
             SqlCommand cmd = sqlConnection.CreateCommand();
             cmd.CommandType = CommandType.Text;
 
-            cmd.CommandText = "insert into Witness (CrimeID, Details) values("
+            cmd.CommandText = "insert into Witness (CrimeID, Details, wimage) values("
                 + crimeId + ",'"
-                + description + "')";
+                + description + "','"
+                + imageBytes + "')";
 
             cmd.ExecuteNonQuery();
             cmd.Dispose();
