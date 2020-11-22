@@ -88,6 +88,7 @@ namespace CrimeManagement {
 
         protected void SendBtn_Click(object sender, EventArgs e) {
             AddWitness(crimeId, detailsBox.Text, fileData);
+            Response.Redirect("ThanxPage.aspx");
         }
 
         protected void OnUploadChange(object sender, EventArgs e) {

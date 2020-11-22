@@ -10,8 +10,8 @@
             margin-top: 15%;
             font-size: 30px;
             text-align: center;
-            background-color:lightgray;
-            
+            background-image:url('image6.jpg');
+            background-size:cover; 
         }
         #BtnWitness , #BtnPolice {
             margin: 90px 100px;
@@ -34,7 +34,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Label ID="Label1" runat="server" Text="Are You Police Or Witness?"></asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="Are You Police Or Witness?" ForeColor="White"></asp:Label>
             <asp:Button ID="BtnPolice" runat="server" Text="Police" OnClick="BtnPolice_Click" />
             <asp:Button ID="BtnWitness" runat="server" Text="Witness" OnClick="BtnWitness_Click" />
         </div>

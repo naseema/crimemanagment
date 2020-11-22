@@ -8,7 +8,9 @@
     <style>
         body{
             margin-left:35%;
-            background-color:darkseagreen;
+            /*background-color:darkseagreen;*/
+            background-image:url('image10.jpg');
+            background-size:cover;
         }
         .style1{
             margin-left:18%;
@@ -27,28 +29,28 @@
             
             <asp:Label ID="Label5" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="Welcome " CssClass="style1"></asp:Label>
             <br />
-            <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Size="X-Large" Text="What crime do you want to talk about?"></asp:Label>
+            <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Size="X-Large" Text="Please answer the following questions:"></asp:Label>
             <br />
-            <asp:Label ID="Label4" runat="server" Font-Bold="True" Font-Size="X-Large" Text="Please answer the following questions:"></asp:Label>
+            <asp:Label ID="Label4" runat="server" Font-Bold="True" Font-Size="X-Large" Text="What crime do you want to talk about?"></asp:Label>
             <br />
             <br />
             <br />
-            <asp:Label ID="TypeID" runat="server" Text="Type :" Font-Size="Large"></asp:Label>
+            <asp:Label ID="TypeID" runat="server" Text="Type :" Font-Size="Large" Font-Bold="True"></asp:Label>
             <asp:DropDownList ID="DropDownType" runat="server" Font-Size="Medium" Height="30px" Width="98px">
                 <asp:ListItem>Murder</asp:ListItem>
                 <asp:ListItem>Theft</asp:ListItem>
             </asp:DropDownList>
             <br />
             <br />
-&nbsp;<asp:Label ID="PlaceLabel" runat="server" Text="Place The Crime :" Font-Size="Large"></asp:Label>
+&nbsp;<asp:Label ID="PlaceLabel" runat="server" Text="Place The Crime :" Font-Size="Large" Font-Bold="True"></asp:Label>
             <asp:TextBox ID="PlaceBox" runat="server" Height="26px" Width="160px"></asp:TextBox>
             <br />
             <br />
-            <asp:Label ID="LabelTime" runat="server" Text="Time :" Font-Size="Large"></asp:Label>
+            <asp:Label ID="LabelTime" runat="server" Text="Time :" Font-Size="Large" Font-Bold="True"></asp:Label>
             <asp:TextBox ID="TimeBox" runat="server" TextMode="Time" Height="26px" Width="160px"></asp:TextBox>
             <br />
             <br />
-            <asp:Label ID="LabelDate" runat="server" Text="Date :" Font-Size="Large"></asp:Label>
+            <asp:Label ID="LabelDate" runat="server" Text="Date :" Font-Size="Large" Font-Bold="True"></asp:Label>
             <asp:TextBox ID="DateBox" runat="server" Height="26px" Width="160px"></asp:TextBox>
             <br />
             <br />
@@ -57,8 +59,8 @@
             <br />
             <br />
 
-        <asp:Label ID="Label2" runat="server" Text="More details :" Visible="False" Font-Size="Large"></asp:Label>
-        <asp:TextBox ID="detailsBox" runat="server" Visible="false" Height="26px" Width="160px"></asp:TextBox>
+        <asp:Label ID="Label2" runat="server" Text="More details :" Visible="False" Font-Size="Large" Font-Bold="True"></asp:Label>
+        <asp:TextBox ID="detailsBox" runat="server" Visible="false" Height="68px" Width="254px"></asp:TextBox>
         <br/>
         <asp:FileUpload Visible="false"  ID="FileUpload1" runat="server" onchange="this.form.submit()"/>
         <%--

@@ -10,6 +10,7 @@ using System.Data.SqlClient;
 namespace CrimeManagement {
     public partial class Police : BaseDataPage {
         protected void Page_Load(object sender, EventArgs e) {
+
             base.Page_Load(sender, e);
             if (!IsPostBack) // To avoid refreshing the page when clicking a button
             {

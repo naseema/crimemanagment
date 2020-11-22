@@ -73,10 +73,15 @@
     </Content>
     <Content Include="Default.aspx" />
     <Content Include="FirstPage.aspx" />
-    <Content Include="imagePage.aspx" />
+    <Content Include="image1.jpg" />
+    <Content Include="image10.jpg" />
+    <Content Include="image6.jpg" />
+    <Content Include="image9.jpg" />
+    <Content Include="imageP2.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="Police.aspx" />
     <Content Include="Suspects.aspx" />
+    <Content Include="ThanxPage.aspx" />
     <Content Include="ViewCrime.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
@@ -101,16 +106,6 @@
     <Compile Include="FirstPage.aspx.designer.cs">
       <DependentUpon>FirstPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Handler1.ashx.cs">
-      <DependentUpon>Handler1.ashx</DependentUpon>
-    </Compile>
-    <Compile Include="imagePage.aspx.cs">
-      <DependentUpon>imagePage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="imagePage.aspx.designer.cs">
-      <DependentUpon>imagePage.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -132,6 +127,13 @@
     </Compile>
     <Compile Include="Suspects.aspx.designer.cs">
       <DependentUpon>Suspects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThanxPage.aspx.cs">
+      <DependentUpon>ThanxPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThanxPage.aspx.designer.cs">
+      <DependentUpon>ThanxPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewCrime.aspx.cs">
       <DependentUpon>ViewCrime.aspx</DependentUpon>
@@ -156,7 +158,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Handler1.ashx" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

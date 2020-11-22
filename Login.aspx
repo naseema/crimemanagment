@@ -5,34 +5,48 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+
     <style>
         body{
-            background-color:powderblue;
+            background-image:url('image1.jpg');
+            background-size:cover; 
+        }
         }
         #Image1{
-              width: 15%;
-              height:15%;
-              margin-top:1%;
+              width: 35%;
+              height:30%;
+              margin-top:-25%;
               padding: 20px;
-              border: 2px solid white;
-              border-radius: 5px;
-              margin-left: 42%;
+              margin-left: 30%;
+              border: 0px solid #555;
+              border-radius: 100px;
+    
               
         }
         #btnLogin{
             margin-left:90%;
             margin-top:30%;
         }
+        .loginbox{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            width:350px;
+            height:350px;
+            padding:80px,40px;
+            box-sizing:border-box;
+            background: rgba(0,0,0,0.5);
+        }
     </style>
 </head>
 <body>
 <form id="form1" runat="server">
-    <div>
+    <div class="loginbox">
         <table style="margin:auto;/*border:5px solid white;*/padding:30px">
             <asp:Image ID="Image1" runat="server"
-                 src="https://www.gov.il/BlobFolder/news/police_assistant_commissioners_appointments2018/he/%D7%A1%D7%9E%D7%9C%20%D7%9E%D7%A9%D7%98%D7%A8%D7%94%20%D7%A8%D7%99%D7%91%D7%95%D7%A2.jpg"/>
-               
-           
+                 src="imageP2.jpg"/>
+        
             <tr>
                 <td>
                     <asp:Label ID="Label3" runat="server" Text="UserName" Font-Size="X-Large" Font-Bold="True"></asp:Label>
