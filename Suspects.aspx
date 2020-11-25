@@ -5,42 +5,69 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <style>
+        body{
+             background-image:url('image0.jpg');
+            background-size:cover; 
+        }
+       .Style{
+           margin-left:35%;
+           margin-top:10%;
+       }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <asp:Label ID="Label1" runat="server" Text="Name :" Font-Bold="True"></asp:Label>
-            <asp:TextBox ID="SusName" runat="server"></asp:TextBox>
+        <div class="Style">
+            <asp:Label ID="Label1" runat="server" Text="Name :" Font-Bold="True" Font-Size="Large"></asp:Label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="SusName" runat="server" Height="25px"></asp:TextBox>
+            <br />
             <br />
 
-            <asp:Label ID="Label2" runat="server" Text="Age :" Font-Bold="True"></asp:Label>
-            <asp:TextBox ID="SusAge" runat="server"></asp:TextBox>
+            <asp:Label ID="Label2" runat="server" Text="Age :" Font-Bold="True" Font-Size="Large"></asp:Label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="SusAge" runat="server" Height="25px"></asp:TextBox>
+            <br />
             <br />
 
-            <asp:Label ID="Label3" runat="server" Text="ID :" Font-Bold="True"></asp:Label>
-            <asp:TextBox ID="SusID" runat="server"></asp:TextBox>
+            <asp:Label ID="Label3" runat="server" Text="ID :" Font-Bold="True" Font-Size="Large"></asp:Label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="SusID" runat="server" Height="25px"></asp:TextBox>
+            <br />
             <br />
 
-            <asp:Label ID="Label4" runat="server" Text="Residence :" Font-Bold="True"></asp:Label>
-            <asp:TextBox ID="SusResidence" runat="server"></asp:TextBox>
+            <asp:Label ID="Label4" runat="server" Text="Residence :" Font-Bold="True" Font-Size="Large"></asp:Label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="SusResidence" runat="server" Height="25px"></asp:TextBox>
+            <br />
             <br />
 
-            <asp:Label ID="Label5" runat="server" Text="Social Status :" Font-Bold="True"></asp:Label>
-            <asp:TextBox ID="SusStatus" runat="server"></asp:TextBox>
+            <asp:Label ID="Label5" runat="server" Text="Social Status :" Font-Bold="True" Font-Size="Large"></asp:Label>
+            &nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="SusStatus" runat="server" Height="25px"></asp:TextBox>
             <br />
-            <asp:Label ID="Label7" runat="server" Text="Date :" Font-Bold="True"></asp:Label>
-            <asp:TextBox ID="DateID" runat="server"></asp:TextBox>
             <br />
-            <asp:Label ID="Label6" runat="server" Text="Crime ID :" Font-Bold="True"></asp:Label>
-            <asp:TextBox ID="CrimeID" runat="server"></asp:TextBox>
+            <asp:Label ID="Label7" runat="server" Text="Date :" Font-Bold="True" Font-Size="Large"></asp:Label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="DateID" runat="server" Height="25px"></asp:TextBox>
+            <br />
+            <br />
+            <asp:Label ID="Label6" runat="server" Text="Crime ID :" Font-Bold="True" Font-Size="Large"></asp:Label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="CrimeID" runat="server" Height="25px"></asp:TextBox>
             <br />
             <br />
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Add Suspects" BorderColor="#006699" BorderStyle="Solid" Font-Bold="True" />
             <br />
+            <br />
+            <br />
+            </div>
 
+            <div>
             <asp:GridView ID="GridSuspects" runat="server"
                 OnRowCommand="graidSuspect_RowCommand" OnRowDeleting="graidSuspect_RowDeleting"
-                OnSelectedIndexChanged="graidSuspect_SelectedIndexChanged">
+                OnSelectedIndexChanged="graidSuspect_SelectedIndexChanged" BackColor="#CCCCCC" BorderColor="#333333" BorderStyle="Double" BorderWidth="5px" ForeColor="Black">
                 <Columns>
                     <asp:TemplateField HeaderText="Delete">
                         <ItemTemplate>

@@ -19,7 +19,7 @@ namespace CrimeManagement
 
                 Button1_Click(null, null);
             }
-           
+
             SetCurrentDateTime();
         }
        
@@ -37,6 +37,7 @@ namespace CrimeManagement
             if (e.CommandName == "DeleteSuspect")
             {
                 DeleteSuspect(int.Parse(e.CommandArgument.ToString()));
+                //Button1_Click(null, null);
                 DisplayDataFromTable(GridSuspects, "Suspects");
             }
         }

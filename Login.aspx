@@ -24,15 +24,23 @@
               
         }
         #btnLogin{
-            margin-left:90%;
+            margin-left:60%;
             margin-top:30%;
+            border: 0px solid #555;
+            border-radius: 100px;
+            
+        }
+          .Label2{
+            margin-top:20%;
+            margin-left:10%;
+          
         }
         .loginbox{
             position: absolute;
             top:50%;
             left:50%;
             transform:translate(-50%,-50%);
-            width:350px;
+            width:400px;
             height:350px;
             padding:80px,40px;
             box-sizing:border-box;
@@ -46,10 +54,11 @@
         <table style="margin:auto;/*border:5px solid white;*/padding:30px">
             <asp:Image ID="Image1" runat="server"
                  src="imageP2.jpg"/>
+            <asp:Label ID="Label2" runat="server" Text="Police Login" CssClass="Label2" Font-Size="X-Large" Font-Bold="True" ForeColor="White"></asp:Label>
         
             <tr>
                 <td>
-                    <asp:Label ID="Label3" runat="server" Text="UserName" Font-Size="X-Large" Font-Bold="True"></asp:Label>
+                    <asp:Label ID="Label3" runat="server" Text="UserName" Font-Size="X-Large" Font-Bold="True" ForeColor="White"></asp:Label>
 
                 </td>
                 <td>
@@ -58,7 +67,7 @@
             </tr>
             <tr>
                 <td>
-                    <asp:Label ID="Label1" runat="server" Text="Password" Font-Size="X-Large" Font-Bold="True"></asp:Label>
+                    <asp:Label ID="Label1" runat="server" Text="Password" Font-Size="X-Large" Font-Bold="True" ForeColor="White"></asp:Label>
 
                 </td>
                 <td>
@@ -67,7 +76,7 @@
             </tr>
             <tr>
                 <td>
-                    <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" Width="77px" Height="30px" Font-Bold="True" Font-Overline="False" Font-Strikeout="False" ForeColor="Black"/>
+                    <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" Width="150px" Height="30px" Font-Bold="True" Font-Overline="False" Font-Strikeout="False" ForeColor="Black"/>
                 </td>
             </tr>
         </table>

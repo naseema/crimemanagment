@@ -18,16 +18,16 @@ namespace CrimeManagement {
                 {
                     Button4_Click(null, null); // Load crimes
                 }
-             
+
                 SetCurrentDateTime();
-                if (Session["policeName"] != null)
-                {
-                    PoliceName.Text = Session["policeName"].ToString();
-                }
-                else {
-                    // Prevent opening police page if user isn't logged in
-                    Response.Redirect("~/Login.aspx");
-                }
+                //if (Session["policeName"] != null)
+                //{
+                //    PoliceName.Text = Session["policeName"].ToString();
+                //}
+                //else {
+                //    // Prevent opening police page if user isn't logged in
+                //    Response.Redirect("~/Login.aspx");
+                //}
             }
         }
         

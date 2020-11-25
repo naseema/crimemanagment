@@ -73,6 +73,7 @@
     </Content>
     <Content Include="Default.aspx" />
     <Content Include="FirstPage.aspx" />
+    <Content Include="image0.jpg" />
     <Content Include="image1.jpg" />
     <Content Include="image10.jpg" />
     <Content Include="image6.jpg" />
