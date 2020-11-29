@@ -8,16 +8,16 @@
 
     <style>
         body{
-            background-image:url('image1.jpg');
+            background-image:url('image3.jpg');
             background-size:cover; 
         }
-        }
-        #Image1{
+       
+        #Image2{
               width: 35%;
-              height:30%;
-              margin-top:-25%;
+              height:45%;
+              margin-top:-32%;
               padding: 20px;
-              margin-left: 30%;
+              margin-left:26%;
               border: 0px solid #555;
               border-radius: 100px;
     
@@ -31,9 +31,7 @@
             
         }
           .Label2{
-            margin-top:20%;
-            margin-left:10%;
-          
+            margin-left:30%;
         }
         .loginbox{
             position: absolute;
@@ -41,7 +39,7 @@
             left:50%;
             transform:translate(-50%,-50%);
             width:400px;
-            height:350px;
+            height:300px;
             padding:80px,40px;
             box-sizing:border-box;
             background: rgba(0,0,0,0.5);
@@ -49,16 +47,18 @@
     </style>
 </head>
 <body>
-<form id="form1" runat="server">
+<form id="form1" runat="server"> 
     <div class="loginbox">
-        <table style="margin:auto;/*border:5px solid white;*/padding:30px">
-            <asp:Image ID="Image1" runat="server"
-                 src="imageP2.jpg"/>
-            <asp:Label ID="Label2" runat="server" Text="Police Login" CssClass="Label2" Font-Size="X-Large" Font-Bold="True" ForeColor="White"></asp:Label>
-        
+          <table style="margin:auto;/*border:5px solid white;*/padding:30px">
+     <asp:Image ID="Image2" runat="server"
+                src="imageP2.jpg"/>
+              <br />
+              <br />
+     <asp:Label ID="Label2" runat="server" Text="Police Login" CssClass="Label2" Font-Size="X-Large" Font-Bold="True" ForeColor="black"></asp:Label>
+             
             <tr>
                 <td>
-                    <asp:Label ID="Label3" runat="server" Text="UserName" Font-Size="X-Large" Font-Bold="True" ForeColor="White"></asp:Label>
+                    <asp:Label ID="Label3" runat="server" Text="UserName" Font-Size="X-Large" Font-Bold="True" ForeColor="black"></asp:Label>
 
                 </td>
                 <td>
@@ -67,7 +67,7 @@
             </tr>
             <tr>
                 <td>
-                    <asp:Label ID="Label1" runat="server" Text="Password" Font-Size="X-Large" Font-Bold="True" ForeColor="White"></asp:Label>
+                    <asp:Label ID="Label1" runat="server" Text="Password" Font-Size="X-Large" Font-Bold="True" ForeColor="black"></asp:Label>
 
                 </td>
                 <td>

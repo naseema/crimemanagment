@@ -10,6 +10,13 @@
             margin-left: 0px;
            
         }
+        #Button4 , #SearchID{
+           float:right;
+        }
+        #grid_crimes{
+            margin-left:35%;
+            margin-top:-20%;
+        }
     </style>
 </head>
 <body>
@@ -20,20 +27,27 @@
         <asp:TextBox ID="PoliceName" runat="server" Height="26px"></asp:TextBox>
         <br />
         <br />
-        <br />
-
         <asp:Button ID="Button4" runat="server" Text="Search Crime" OnClick="Button4_Click" BackColor="#666666" BorderColor="#333333" BorderStyle="Solid" Font-Names="Franklin Gothic Demi" Font-Size="Medium" ForeColor="White" Height="28px" Width="110px"/>
         <asp:TextBox ID="SearchID" runat="server" Width="198px" BorderStyle="Solid" Height="20px" CssClass="auto-style1"></asp:TextBox>
+        <asp:Button ID="Button6" runat="server" BackColor="#666666" BorderColor="#333333" BorderStyle="Solid" Font-Names="Franklin Gothic Demi" Font-Size="Medium" ForeColor="White" Height="33px" OnClick="Button6_Click" Text="Suspects Page" Width="150px" />
+         &nbsp;<br />
         <br/>
+        <br />
+        <br />
         <br/>
-        <asp:Label ID="Label1" runat="server" Text="Crime Type :" ForeColor="Black" Font-Bold="True" Font-Italic="False" Font-Names="Franklin Gothic Demi Cond" Font-Overline="False" Font-Strikeout="False" Font-Underline="False"></asp:Label>
+        <br />
+        <br />
+        <asp:Label ID="Label6" runat="server" Text="Introducing a new crime" ForeColor="Black" Font-Bold="True" Font-Italic="False" Font-Names="Franklin Gothic Demi Cond" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" Font-Size="Larger"></asp:Label>
+        <br />
+        <br />
+          <asp:Label ID="Label1" runat="server" Text="Crime Type :" ForeColor="Black" Font-Bold="True" Font-Italic="False" Font-Names="Franklin Gothic Demi Cond" Font-Overline="False" Font-Strikeout="False" Font-Underline="False"></asp:Label>
         &nbsp;<asp:DropDownList ID="TB_CrimeType" runat="server">
             <asp:ListItem>Murder</asp:ListItem>
             <asp:ListItem>Theft</asp:ListItem>
         </asp:DropDownList>
         <br />
-        <br/>
-        <asp:Label ID="Label2" runat="server" Text="Time :" ForeColor="Black" Font-Bold="True" Font-Names="Franklin Gothic Demi Cond"></asp:Label>
+        <br />
+         <asp:Label ID="Label2" runat="server" Text="Time :" ForeColor="Black" Font-Bold="True" Font-Names="Franklin Gothic Demi Cond"></asp:Label>
         <asp:TextBox ID="TimeID" runat="server" TextMode="Time" Height="22px" ></asp:TextBox>
         <br />
         <br/>
@@ -48,14 +62,9 @@
         <asp:Label ID="Label4" runat="server" Text="Details:" ForeColor="Black" Font-Bold="True" Font-Names="Franklin Gothic Demi Cond"></asp:Label>
         <asp:TextBox ID="TB_Details" runat="server" Height="22px"></asp:TextBox>
         <br/>
-        <br/>
+        <br />
         <asp:Button ID="Button5" runat="server" Text="Add Crime" OnClick="Button5_Click" BackColor="#666666" BorderColor="#333333" BorderStyle="Solid" ForeColor="White" Height="33px" Width="150px" Font-Names="Franklin Gothic Demi" Font-Size="Medium"/>
 
-        &nbsp;&nbsp;
-        <asp:Button ID="Button6" runat="server" BackColor="#666666" BorderColor="#333333" BorderStyle="Solid" Font-Names="Franklin Gothic Demi" Font-Size="Medium" ForeColor="White" Height="33px" OnClick="Button6_Click" Text="Suspects Page" Width="150px" />
-
-        <br/>
-        <br/>
 
         <%-- Crimes --%>
 

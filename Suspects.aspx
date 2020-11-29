@@ -12,7 +12,15 @@
         }
        .Style{
            margin-left:35%;
-           margin-top:10%;
+           margin-top:12%;
+       }
+       .Style2{
+           margin-left:20%;
+       }
+       #Button1{
+           border: 5px solid #555;
+           border-radius: 100px;
+           margin-left:8%;
        }
     </style>
 </head>
@@ -58,13 +66,14 @@
             <asp:TextBox ID="CrimeID" runat="server" Height="25px"></asp:TextBox>
             <br />
             <br />
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Add Suspects" BorderColor="#006699" BorderStyle="Solid" Font-Bold="True" />
+            <br />
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Add Suspects" Font-Bold="True" BackColor="#999999" Height="37px" Width="189px" />
             <br />
             <br />
             <br />
             </div>
 
-            <div>
+            <div class="Style2">
             <asp:GridView ID="GridSuspects" runat="server"
                 OnRowCommand="graidSuspect_RowCommand" OnRowDeleting="graidSuspect_RowDeleting"
                 OnSelectedIndexChanged="graidSuspect_SelectedIndexChanged" BackColor="#CCCCCC" BorderColor="#333333" BorderStyle="Double" BorderWidth="5px" ForeColor="Black">

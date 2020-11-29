@@ -19,12 +19,13 @@ namespace CrimeManagement {
                     Button4_Click(null, null); // Load crimes
                 }
 
-                SetCurrentDateTime();
+                //SetCurrentDateTime();
                 //if (Session["policeName"] != null)
                 //{
                 //    PoliceName.Text = Session["policeName"].ToString();
                 //}
-                //else {
+                //else
+                //{
                 //    // Prevent opening police page if user isn't logged in
                 //    Response.Redirect("~/Login.aspx");
                 //}
@@ -74,5 +75,6 @@ namespace CrimeManagement {
         {
             Response.Redirect("Suspects.aspx");
         }
+
     }
 }

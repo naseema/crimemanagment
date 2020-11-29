@@ -10,7 +10,7 @@
             margin-left:40%;
             margin-right:35%;
             margin-top:20%;
-             background-image:url('image9.jpg');
+             background-image:url('image6.jpg');
             background-size:cover;
         }
     </style>

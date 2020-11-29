@@ -29,9 +29,18 @@
         <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
         <br/>
         <br/>
+        <asp:Label ID="Label4" runat="server" Font-Bold="True" Text="Time :"></asp:Label>
+&nbsp;<asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+        <br />
         <br/>
 
+        <asp:Label ID="Label5" runat="server" Font-Bold="True" Text="Date :"></asp:Label>
+&nbsp;<asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+
         <br/>
+        <br />
+        <asp:Label ID="Label6" runat="server" Text="The sayings of the witnesses" Font-Bold="True" Font-Names="Rockwell Condensed" Font-Size="Large"></asp:Label>
+        <br />
         <br/>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC">
             <Columns>
@@ -53,14 +62,18 @@
         </asp:GridView>
         <br/>
         <br/>
-
+    
 
         <br/>
 
                 <%-- Add suspects--%>
-        
+        <asp:Label ID="Label7" runat="server" Text="Search and Add new suspect to this crime" Font-Bold="True" Font-Names="Rockwell Condensed" Font-Size="Large"></asp:Label>
+        <br />
         <asp:TextBox ID="FilterSusbectTB" runat="server" OnTextChanged="FilterSusbectTB_TextChanged" placeholder="Search suspect by name"
                      AutoPostBack="true"/>
+        <br />
+        <br />
+        <br />
         <asp:GridView ID="GridViewAddSuspects" runat="server" OnRowCommand="Suspects_RowCommand" BorderColor="Black" BackColor="#CCCCCC">
             <Columns>
                 <asp:TemplateField HeaderText="Add Suspect">
@@ -74,7 +87,7 @@
         <br/>
         <%-- Show suspects--%>
         <br/>
-
+      
         <asp:GridView ID="GridViewSuspects" runat="server" OnRowCommand="Suspects_RowCommand" BorderColor="Black" BackColor="#CCCCCC">
             <Columns>
                 <asp:TemplateField HeaderText="Delete Suspect">

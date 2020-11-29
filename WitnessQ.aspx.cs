@@ -50,7 +50,7 @@ namespace CrimeManagement {
                     // change the button text, and disable it.
 
                     Button clickedButton = (Button) sender;
-                    clickedButton.Text = "...button clicked...";
+                    //clickedButton.Text = "...button clicked...";
                     clickedButton.Enabled = false;
 
                     // Display the greeting label text.

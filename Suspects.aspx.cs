@@ -16,9 +16,9 @@ namespace CrimeManagement
             base.Page_Load(sender, e);
             if (!IsPostBack)
             {
-
-                Button1_Click(null, null);
+                DisplayDataFromTable(GridSuspects, "Suspects");
             }
+
 
             SetCurrentDateTime();
         }
