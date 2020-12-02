@@ -94,5 +94,10 @@ namespace CrimeManagement {
         protected void OnUploadChange(object sender, EventArgs e) {
             AddWitness(crimeId, detailsBox.Text, Convert.ToBase64String(FileUpload1.FileBytes));
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("FirstPage.aspx");
+        }
     }
 }

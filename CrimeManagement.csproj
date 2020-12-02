@@ -74,13 +74,14 @@
     <Content Include="Default.aspx" />
     <Content Include="FirstPage.aspx" />
     <Content Include="image0.jpg" />
+    <Content Include="image15.jpg" />
     <Content Include="image3.jpg" />
     <Content Include="image5.jpg" />
     <Content Include="image6.jpg" />
+    <Content Include="image7.jpg" />
     <Content Include="image8.jpg" />
     <Content Include="imageP1.jpg" />
     <Content Include="imageP2.jpg" />
-    <Content Include="imageP3.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="Police.aspx" />
     <Content Include="Suspects.aspx" />

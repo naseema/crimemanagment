@@ -17,7 +17,7 @@
             margin: 90px 100px;
             width: 200px;
             height: 50px;
-            background-color: darkseagreen;
+            background-color: rgba(0, 95, 36, 0.4);
             border-radius: 30px;
             border: black;
             font-family: "Times New Roman";

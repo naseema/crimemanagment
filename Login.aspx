@@ -28,6 +28,7 @@
             margin-top:30%;
             border: 0px solid #555;
             border-radius: 100px;
+            background-color:rgba(0, 57, 124, 0.8);
             
         }
           .Label2{
@@ -42,7 +43,9 @@
             height:300px;
             padding:80px,40px;
             box-sizing:border-box;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0, 75, 120, 0.5);
+            border-radius: 5px 5px 5px 5px;
+            border:none;
         }
     </style>
 </head>
