@@ -18,8 +18,8 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="60px" Text="Thank you "></asp:Label>
-            <span style='font-size:100px;'>&nbsp;&nbsp;&nbsp; &#9786;</span>
+            <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="60px" Text="Thank you " Font-Names="CommercialScript BT"></asp:Label>
+            <span style='font-size:100px;'>&nbsp;&nbsp;&nbsp;☺</span>
         </div>
     </form>
 </body>

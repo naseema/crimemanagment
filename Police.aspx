@@ -46,14 +46,30 @@
             border-radius: 5px 5px 5px 5px;
             border:none;
         }
+        .Style1{
+            background-color:#336699;
+        }
+        .Style2{
+            color:#003366;
+        }
+        #Image2{
+            width: 3%;
+            height:2%;
+            float:left;
+            border:none;
+            border-radius: 100px;
+        }
+        #PoliceName{
+            margin-top:0.5%;
+        }
     </style>
 </head>
 <body>
 <form id="form1" runat="server">
     <div>
-        <asp:Label ID="Pname" runat="server" Text="Welcome User :" Font-Bold="True" Font-Size="Larger"></asp:Label>
-
-        <asp:TextBox ID="PoliceName" runat="server" Height="26px"></asp:TextBox>
+        <%--<asp:Label ID="Pname" runat="server" Text="Welcome User :" Font-Bold="True" Font-Size="Larger"></asp:Label>--%>
+          <asp:Image ID="Image2" runat="server" src="image17.jpg" />
+       &nbsp; <asp:TextBox ID="PoliceName" runat="server" Height="26px" Enabled="False" Width="84px"></asp:TextBox>
         <br />
         <br />
         <asp:Button ID="Button4" runat="server" Text="Search Crime" OnClick="Button4_Click" BackColor="#666666" BorderColor="#333333" BorderStyle="Solid" Font-Names="Franklin Gothic Demi" Font-Size="Medium" ForeColor="White" Height="28px" Width="110px"/>
@@ -110,13 +126,13 @@
             <Columns>
 
                 <asp:HyperLinkField Text="View"
-                                    DataNavigateUrlFields="ID"
+                                    DataNavigateUrlFields="ID" ControlStyle-CssClass="Style2"
                                     DataNavigateUrlFormatString="~/ViewCrime.aspx?id={0}"/>
 
 
                 <asp:TemplateField HeaderText="Delete">
                     <ItemTemplate>
-                        <asp:Button runat="server" ID="btndelete" Text="Delete" CommandArgument='<%# Eval("ID") %>' CommandName="DeleteCrime"/>
+                        <asp:Button runat="server" ID="btndelete" CssClass="Style1" Text="Delete" CommandArgument='<%# Eval("ID") %>' CommandName="DeleteCrime"/>
                     </ItemTemplate>
                 </asp:TemplateField>
 

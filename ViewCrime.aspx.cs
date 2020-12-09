@@ -17,6 +17,8 @@ namespace CrimeManagement
             base.Page_Load(sender, e);
             if (!Page.IsPostBack) {
 
+                DisplayDataFromTable(GridView1, "Witness");
+
                 if (!String.IsNullOrEmpty(Request.QueryString["id"])) {
                     this.TextBox1.Text = Request.QueryString["id"];
                     Crime crime = GetCrime(TextBox1.Text);
@@ -110,6 +112,36 @@ namespace CrimeManagement
             GridViewSuspects.DataBind();
             cmd.Dispose();
             
+        }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "DeleteWitness")
+            {
+                DeleteSuspect(int.Parse(e.CommandArgument.ToString()));
+                //Button1_Click(null, null);
+                DisplayDataFromTable(GridView1, "Witness");
+            }
+        }
+
+        public void DisplayDataFromTable(GridView gridView, string tabelName)
+        {
+            SqlCommand cmd = sqlConnection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from " + tabelName;
+            cmd.ExecuteNonQuery();
+
+            DataTable data = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(data);
+            gridView.DataSource = data;
+            gridView.DataBind();
+            cmd.Dispose();
         }
     }
 

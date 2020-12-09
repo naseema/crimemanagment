@@ -75,5 +75,10 @@ namespace CrimeManagement
         {
             DateID.Text = DateTime.UtcNow.ToString("yyyy-MM-dd");
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Police.aspx");
+        }
     }
 }

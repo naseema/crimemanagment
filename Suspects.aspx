@@ -17,10 +17,13 @@
        .Style2{
            margin-left:20%;
        }
-       #Button1{
+       #Button1,#Button2{
            border: 5px solid #555;
            border-radius: 100px;
-           margin-left:8%;
+           margin-left:-2%;
+       }
+       .Style3{
+           background-color:#999999;
        }
     </style>
 </head>
@@ -69,6 +72,7 @@
             <br />
             <br />
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Add Suspects" Font-Bold="True" BackColor="#999999" Height="37px" Width="189px" />
+            &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;<asp:Button ID="Button2" runat="server" Text="cancel" Font-Bold="True" BackColor="#999999" Height="37px" Width="189px" OnClick="Button2_Click"/>
             <br />
             <br />
             <br />
@@ -81,7 +85,7 @@
                 <Columns>
                     <asp:TemplateField HeaderText="Delete">
                         <ItemTemplate>
-                            <asp:Button ID="ButDelete" runat="server" Text="Delete"  CommandName="DeleteSuspect" CommandArgument='<%# Eval("ID") %>'/>
+                            <asp:Button ID="ButDelete" CssClass="Style3" runat="server" Text="Delete"  CommandName="DeleteSuspect" CommandArgument='<%# Eval("ID") %>'/>
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>

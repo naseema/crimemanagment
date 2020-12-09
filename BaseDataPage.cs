@@ -124,7 +124,16 @@ namespace CrimeManagement {
             cmd.ExecuteNonQuery();
             cmd.Dispose();
         }
+        protected void DeleteWitness(int id)
+        {
+            SqlCommand cmd = sqlConnection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
 
+            cmd.CommandText = "DELETE from Witness WHERE id=" + id;
+
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
+        }
         protected List<String> GetCrimeReports(String crimeId) {
             return null;
         }

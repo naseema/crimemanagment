@@ -75,6 +75,8 @@
     <Content Include="FirstPage.aspx" />
     <Content Include="image0.jpg" />
     <Content Include="image15.jpg" />
+    <Content Include="image16.jpg" />
+    <Content Include="image17.jpg" />
     <Content Include="image3.jpg" />
     <Content Include="image5.jpg" />
     <Content Include="image6.jpg" />
