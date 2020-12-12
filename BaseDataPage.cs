@@ -134,6 +134,35 @@ namespace CrimeManagement {
             cmd.ExecuteNonQuery();
             cmd.Dispose();
         }
+
+        protected string GetImage(string id)
+        {
+            SqlCommand cmd = sqlConnection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "SELECT wimage from Witness WHERE id=" + id;
+
+            SqlDataReader sqlr = null;
+
+            try
+            {
+                sqlr = cmd.ExecuteReader();
+                if (sqlr.Read())
+                {
+                    return sqlr.GetString(0);
+               
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            finally
+            {
+                sqlr?.Close();
+                cmd.Dispose();
+            }
+        }
         protected List<String> GetCrimeReports(String crimeId) {
             return null;
         }

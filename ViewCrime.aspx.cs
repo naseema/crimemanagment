@@ -17,7 +17,7 @@ namespace CrimeManagement
             base.Page_Load(sender, e);
             if (!Page.IsPostBack) {
 
-                DisplayDataFromTable(GridView1, "Witness");
+               
 
                 if (!String.IsNullOrEmpty(Request.QueryString["id"])) {
                     this.TextBox1.Text = Request.QueryString["id"];
@@ -60,12 +60,12 @@ namespace CrimeManagement
                 ChangeSuspectCommittedCrime(crimeID,suspectId, !isCommitted);
                 ReloadSuspects();
             }
-            if (e.CommandName == "DeleteSuspect") {
-                string crimeID = e.CommandArgument.ToString().Split(',')[0];
-                string suspectId = e.CommandArgument.ToString().Split(',')[1];
-                DeleteSuspectFromCrime(crimeID,suspectId);
-                ReloadSuspects();
-            }
+            //if (e.CommandName == "DeleteSuspect") {
+            //    string crimeID = e.CommandArgument.ToString().Split(',')[0];
+            //    string suspectId = e.CommandArgument.ToString().Split(',')[1];
+            //    DeleteSuspectFromCrime(crimeID,suspectId);
+            //    ReloadSuspects();
+            //}
             if (e.CommandName == "AddSuspect") {
                 string crimeID = Request.QueryString["id"];
                 string suspectId = e.CommandArgument.ToString();
@@ -123,25 +123,20 @@ namespace CrimeManagement
         {
             if (e.CommandName == "DeleteWitness")
             {
-                DeleteSuspect(int.Parse(e.CommandArgument.ToString()));
+                DeleteWitness(int.Parse(e.CommandArgument.ToString()));
                 //Button1_Click(null, null);
-                DisplayDataFromTable(GridView1, "Witness");
+                ShowWitness(Request.QueryString["id"]);
             }
         }
 
-        public void DisplayDataFromTable(GridView gridView, string tabelName)
+        protected void Button2_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = sqlConnection.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from " + tabelName;
-            cmd.ExecuteNonQuery();
-
-            DataTable data = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(data);
-            gridView.DataSource = data;
-            gridView.DataBind();
-            cmd.Dispose();
+            Response.Redirect("Police.aspx");
+        }
+        protected void OpenImage(object sender, EventArgs e)
+        {
+           
+            Response.Redirect("ViewImage.aspx?id=" + (sender as ImageButton).CommandArgument);
         }
     }
 

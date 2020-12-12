@@ -17,6 +17,7 @@ namespace CrimeManagement {
                 if (!Page.IsPostBack)
                 {
                     Button4_Click(null, null); // Load crimes
+                    LoadCrimeByCity();
                 }
 
                 SetCurrentDateTime();
@@ -68,12 +69,27 @@ namespace CrimeManagement {
 
         protected void grid_crimes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Response.Redirect("~/ViewCrime.aspx?Location=" + TB_CrimeType.Text + "&Details=" + TB_Details.Text + "&place=" + PlaceID /*+ "&Time=" + TimeID + "&Date=" + DateID*/);
+            Response.Redirect("~/ViewCrime.aspx?Location=" + TB_CrimeType.Text + "&Details=" + TB_Details.Text + "&place=" + PlaceID);
         }
 
         protected void Button6_Click(object sender, EventArgs e)
         {
             Response.Redirect("Suspects.aspx");
+        }
+
+        protected void LoadCrimeByCity()
+        {
+            SqlCommand cmd = sqlConnection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select location, count(location) as number_of_crimes, 100 * count(location) / (select count(*) from crimes) as crime_ratio  from crimes  group by location";
+            cmd.ExecuteNonQuery();
+            //SqlCommand cmd = QueryData("crimes", "description LIKE '%" + SearchID.Text + "%'");
+            DataTable data = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(data);
+            CrimeByCity.DataSource = data;
+            CrimeByCity.DataBind();
+            cmd.Dispose();
         }
 
     }

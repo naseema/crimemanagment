@@ -11,7 +11,8 @@
             font-size: 30px;
             text-align: center;
             background-image:url('image5.jpg');
-            background-size:cover; 
+            background-size:cover;
+           
         }
         #BtnWitness , #BtnPolice {
             margin: 90px 100px;

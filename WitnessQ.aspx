@@ -63,7 +63,7 @@
             <br />
             <br />
             <asp:Label ID="LabelDate" runat="server" Text="Date :" Font-Size="Larger" Font-Bold="True" Font-Names="Dutch801 XBd BT"></asp:Label>
-            <asp:TextBox ID="DateBox" runat="server" Height="26px" Width="160px"></asp:TextBox>
+            <asp:TextBox ID="DateBox" runat="server" Height="26px" Width="160px" TextMode="Date"></asp:TextBox>
             <br />
             <br />
             <br />

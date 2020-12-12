@@ -146,6 +146,16 @@
 
         </asp:GridView>
         <br />
+
+            <asp:GridView id="CrimeByCity" runat="server"
+                   ForeColor="Black" Height="200px" Width="300px" Font-Bold="True" Font-Italic="False" Font-Size="Large" Font-Strikeout="False" Font-Underline="False" BorderColor="#003366" BorderStyle="Double">
+        
+                <Columns>
+                    <asp:BoundField DataField="crime_ratio" DataFormatString="{0:0.00}%
+" HeaderText="crime_ratio" />
+
+                </Columns>
+        </asp:GridView>
     </div>
 </form>
 </body>

@@ -61,28 +61,12 @@ namespace CrimeManagement {
                     crimeId = sqlr.GetInt32(0);
                 }
                 else {
-                    Response.Write(" Error");
+                    Response.Write("<span style='height:118px;width:117px;Z-INDEX: 100; LEFT: 500px; TOP: 450px ; color:red ;  background-color:lightgrey; font-size:Larger'>Sorry ,There is no such crime!</span>");
                 }
             }
             finally {
                 sqlr?.Close();
                 cmd.Dispose();
-            }
-        }
-
-        protected void FileBtn_Click(object sender, EventArgs e) {
-            if (FileUpload1.HasFile) //fileupload control contains a file  
-                try {
-                    FileUpload1.SaveAs("E:\\" + FileUpload1.FileName); // file path where you want to upload  
-                    Label1.Text =
-                        "File Uploaded Sucessfully !! " + FileUpload1.PostedFile.ContentLength +
-                        "mb"; // get the size of the uploaded file  
-                }
-                catch (Exception ex) {
-                    Label1.Text = "File Not Uploaded!!" + ex.Message.ToString();
-                }
-            else {
-                Label1.Text = "Please Select File and Upload Again";
             }
         }
 

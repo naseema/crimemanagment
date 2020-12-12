@@ -24,6 +24,7 @@
 <body>
 <form id="form1" runat="server">
     <div class="auto-style1">
+        <asp:Button ID="Button2" runat="server" Text="cancel" OnClick="Button2_Click" />
         <br/>
         <asp:Label ID="Label1" runat="server" Text="Crime ID :" Font-Bold="True" ForeColor="Black"></asp:Label>
         <asp:TextBox ID="TextBox1" runat="server" Font-Bold="False" Enabled="False"></asp:TextBox>
@@ -63,8 +64,9 @@
                 <asp:BoundField DataField="Details" HeaderText="Details" />
                 <asp:TemplateField HeaderText="IMG">
                     <ItemTemplate>
-                        <asp:Image ID="Image1" runat="server" Visible='<%# Eval("wimage").ToString().Length > 0 %>'  ImageUrl='<%# "data:image;base64, " + Eval("wimage") %>' style="max-height:50px;"/>
-                    </ItemTemplate>
+                        <asp:ImageButton ID="Image1" runat="server" Visible='<%# Eval("wimage").ToString().Length > 0 %>'  ImageUrl='<%# "data:image;base64, " + Eval("wimage") %>' CommandArgument='<%#Eval("ID") %>' OnClick="OpenImage" style="max-height:50px;"/>
+                   </ItemTemplate>
+                     
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="Delete">
                     <ItemTemplate>
@@ -72,6 +74,7 @@
                 </asp:TemplateField>
             </Columns>
             <HeaderStyle BackColor="#666699" />
+
         </asp:GridView>
         <br/>
         <br/>
@@ -102,12 +105,12 @@
         <%-- Show suspects--%>
         <br/>
       
-        <asp:GridView ID="GridViewSuspects" runat="server" OnRowCommand="Suspects_RowCommand" BorderColor="#CC99FF" BackColor="#CCCCCC" BorderStyle="Inset" BorderWidth="2px" AutoGenerateColumns="False">
+        <asp:GridView ID="GridViewSuspects" runat="server" OnRowCommand="Suspects_RowCommand" BorderColor="#CC99FF" BackColor="#CCCCCC" BorderStyle="Inset" BorderWidth="2px" AutoGenerateColumns="false">
             <Columns>
                  <asp:BoundField DataField="SuspectName" HeaderText="SuspectName" />
                    <asp:BoundField DataField="SuspectAge" HeaderText="SuspectAge" />
                 <asp:BoundField DataField="SuspectID" HeaderText="SuspectID" />             
-<%--                <asp:BoundField DataField="ResidenceTheSuspect" HeaderText="ResidenceTheSuspect" />--%>
+                <asp:BoundField DataField="place" HeaderText="place" />
                 <asp:BoundField DataField="SocialStatus" HeaderText="SocialStatus" />
                 <asp:BoundField DataField="Date" HeaderText="Date" />
                    <asp:BoundField DataField="is_committed" HeaderText="is_committed" />
@@ -121,14 +124,17 @@
                     
                     </ItemTemplate>
                 </asp:TemplateField>
-                 <asp:TemplateField HeaderText="Delete Suspect">
+               <%--  <asp:TemplateField HeaderText="Delete Suspect">
                     <ItemTemplate>
                         <asp:Button ID="ButDeleteSuspect" CssClass="Style1" runat="server" Text="Delete" CommandName="DeleteSuspect" CommandArgument='<%# Eval("crimeId") + "," + Eval("SuspectsID") %>'/>
                     </ItemTemplate>
-                </asp:TemplateField>
+                </asp:TemplateField>--%>
             </Columns>
             <HeaderStyle BackColor="#666699" />
+
+
         </asp:GridView>
+
     </div>
 </form>
 </body>
