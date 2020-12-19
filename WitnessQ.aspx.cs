@@ -37,37 +37,28 @@ namespace CrimeManagement {
 
 
         protected void Button1_Click(object sender, EventArgs e) {
-            SqlCommand cmd = sqlConnection.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "Select * from crimes WHERE location = '" + PlaceBox.Text + "' and type = '" +
-                              DropDownType.Text + "' " +
-                              "AND time like '" + TimeBox.Text + "%' AND date='" + DateBox.Text + "'";
-            SqlDataReader sqlr = null;
-            try {
-                sqlr = cmd.ExecuteReader();
-                if (sqlr.Read()) {
-                    // When the button is clicked,
-                    // change the button text, and disable it.
+            var result = IsCrimeExist(PlaceBox.Text, DropDownType.Text, TimeBox.Text, DateBox.Text);
+            if (result > -1) // If we found crime with the informmation above
+            {
+                // When the button is clicked,
+                // change the button text, and disable it.
 
-                    Button clickedButton = (Button) sender;
-                    //clickedButton.Text = "...button clicked...";
-                    clickedButton.Enabled = false;
+                Button clickedButton = (Button)sender;
+                //clickedButton.Text = "...button clicked...";
+                clickedButton.Enabled = false;
 
-                    // Display the greeting label text.
-                    Label2.Visible = true;
-                    detailsBox.Visible = true;
-                    SendBtn.Visible = true;
-                    FileUpload1.Visible = true;
-                    crimeId = sqlr.GetInt32(0);
-                }
-                else {
-                    Response.Write("<span style='height:118px;width:117px;Z-INDEX: 100; LEFT: 500px; TOP: 450px ; color:red ;  background-color:lightgrey; font-size:Larger'>Sorry ,There is no such crime!</span>");
-                }
+                // Display the greeting label text.
+                Label2.Visible = true;
+                detailsBox.Visible = true;
+                SendBtn.Visible = true;
+                FileUpload1.Visible = true;
+                crimeId = result;
+            } else
+            {
+                Response.Write("<span style='height:118px;width:117px;Z-INDEX: 100; LEFT: 500px; TOP: 450px ; color:red ;  background-color:lightgrey; font-size:Larger'>Sorry ,There is no such crime!</span>");
+
             }
-            finally {
-                sqlr?.Close();
-                cmd.Dispose();
-            }
+               
         }
 
         protected void SendBtn_Click(object sender, EventArgs e) {

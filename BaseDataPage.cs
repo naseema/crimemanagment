@@ -263,5 +263,33 @@ namespace CrimeManagement {
             cmd.Dispose();
         }
 
+        protected int IsCrimeExist(string PlaceBox, string DropDownType , string TimeBox , string DateBox )
+        {
+            SqlCommand cmd = sqlConnection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "Select * from crimes WHERE location = '" + PlaceBox + "' and type = '" +
+                              DropDownType  + "' " +
+                              "AND time like '" + TimeBox + "%' AND date='" + DateBox + "'";
+            SqlDataReader sqlr = null;
+            try
+            {
+                sqlr = cmd.ExecuteReader();
+                if (sqlr.Read())
+                {
+                    return sqlr.GetInt32(0); //CrimeId
+
+                }
+                else
+                {
+                    return -1;
+                }
+            }
+            finally
+            {
+                sqlr?.Close();
+                cmd.Dispose();
+            }
+        }
+
     }
 }

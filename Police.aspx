@@ -21,8 +21,10 @@
             margin-left:35%;
             margin-top:-25%;
             border:none;
-           /* background-color:rgba(0, 0, 0, 0.1);*/
 
+        }
+        #CrimeByCity{
+            margin-left:40%;
         }
         #Label6{
             background-color:lightgrey;
@@ -151,10 +153,13 @@
                    ForeColor="Black" Height="200px" Width="300px" Font-Bold="True" Font-Italic="False" Font-Size="Large" Font-Strikeout="False" Font-Underline="False" BorderColor="#003366" BorderStyle="Double">
         
                 <Columns>
-                    <asp:BoundField DataField="crime_ratio" DataFormatString="{0:0.00}%
-" HeaderText="crime_ratio" />
+                    <asp:BoundField DataField="crime_ratio" DataFormatString="{0:0.00}% " HeaderText="crime_ratio" />
 
                 </Columns>
+                 <EditRowStyle Font-Bold="True" />
+
+            <HeaderStyle BackColor="#333333" Font-Bold="False" Font-Size="Medium" ForeColor="White" />
+            <RowStyle BackColor="#CCCCCC" />
         </asp:GridView>
     </div>
 </form>

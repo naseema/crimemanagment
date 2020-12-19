@@ -38,6 +38,16 @@ namespace CrimeManagement
                     // TODO bad params, show error
                 }
 
+                if (Session["policeName"] != null)
+                {
+                    PoliceName.Text = Session["policeName"].ToString();
+                }
+                else
+                {
+                    // Prevent opening police page if user isn't logged in
+                    Response.Redirect("~/Login.aspx");
+                }
+
             }
         }
 
